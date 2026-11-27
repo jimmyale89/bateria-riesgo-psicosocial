@@ -371,6 +371,8 @@ export default function App() {
           <ReportsView
             company={companyForViews}
             workers={activeWorkers}
+            ausentismoRecords={ausentismoRecords}
+            incapacidadesRecords={incapacidadesRecords}
           />
         )}
 
