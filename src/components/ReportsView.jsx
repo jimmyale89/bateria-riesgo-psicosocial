@@ -26,7 +26,13 @@ import {
   Heart,
   Brain,
   Layers,
-  HelpCircle
+  HelpCircle,
+  Target,
+  Zap,
+  ArrowUpRight,
+  CheckSquare,
+  Flame,
+  ShieldAlert
 } from 'lucide-react';
 import RiskBadge from './RiskBadge';
 import { COMPANY_SUMMARY_STATS } from '../data/mockData';
@@ -856,155 +862,513 @@ export default function ReportsView({
         )}
 
         {/* ============================================================== */}
-        {/* DOCUMENT 2: INFORME GERENCIAL EJECUTIVO (PARA GERENCIA GENERAL)  */}
+        {/* DOCUMENT 2: INFORME GERENCIAL EJECUTIVO (VISUAL & DECISIONES)  */}
         {/* ============================================================== */}
         {reportType === 'executive' && (
-          <div className="space-y-10 text-sm sm:text-base leading-relaxed text-slate-800">
+          <div className="space-y-10 text-slate-800">
             
-            {/* 1. Resumen Ejecutivo "La Foto en Cifras" */}
-            <section className="space-y-4">
-              <h3 className="text-lg sm:text-xl font-black text-slate-950 border-l-4 border-rose-600 pl-3">
-                1. RESUMEN EJECUTIVO: "LA FOTO EN CIFRAS" PARA LA GERENCIA GENERAL
-              </h3>
-              <p className="text-justify text-slate-800">
-                La evaluación de riesgo psicosocial en <strong>{company.nombre}</strong> con una cobertura del <strong>100% del personal ({totalTrabajadores} colaboradores)</strong> permite a la Alta Dirección dimensionar el impacto directo que el bienestar psicológico, las cargas de trabajo y los turnos tienen sobre la productividad, el ausentismo y la estabilidad jurídica de la empresa.
-              </p>
+            {/* Header Visual Bar */}
+            <div className="bg-gradient-to-r from-slate-900 via-rose-950 to-slate-900 text-white p-6 rounded-3xl shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="space-y-1">
+                <span className="text-[11px] font-black uppercase tracking-widest text-rose-400 bg-rose-500/20 px-2.5 py-0.5 rounded-full inline-block">
+                  Executive Briefing • C-Level
+                </span>
+                <h3 className="text-xl sm:text-2xl font-black text-white">
+                  DASHBOARD GERENCIAL: DIAGNÓSTICO EN 60 SEGUNDOS
+                </h3>
+                <p className="text-xs text-slate-300">
+                  Resumen de alto impacto para la Alta Dirección • Cifras clave, costo de inacción y decisiones inmediatas.
+                </p>
+              </div>
+              <div className="bg-white/10 border border-white/20 rounded-2xl px-4 py-2.5 text-center shrink-0">
+                <span className="text-[10px] text-slate-300 uppercase font-bold block">Soberanía de Decisión</span>
+                <span className="text-sm font-black text-amber-400 flex items-center justify-center gap-1">
+                  <Zap className="w-3.5 h-3.5" /> 3 Aprobaciones Clave
+                </span>
+              </div>
+            </div>
 
-              {/* 4 C-Level KPIs */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                <div className="p-5 bg-slate-900 text-white rounded-3xl shadow-md space-y-1.5">
-                  <span className="text-[11px] text-rose-400 font-bold uppercase tracking-wider block">Nivel de Riesgo Global</span>
-                  <span className="text-2xl font-black text-rose-400 block">{company.resumenRiesgo?.semaforoGeneral || 'ALTO'}</span>
-                  <span className="text-xs text-slate-400">Exposición crítica</span>
+            {/* 1. Tablero de 4 KPIs Clave */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div className="p-5 bg-white border-2 border-rose-300 rounded-3xl shadow-sm space-y-2">
+                <div className="flex justify-between items-center text-xs font-bold text-slate-500">
+                  <span>Riesgo Global</span>
+                  <Flame className="w-4 h-4 text-rose-600" />
                 </div>
-
-                <div className="p-5 bg-slate-900 text-white rounded-3xl shadow-md space-y-1.5">
-                  <span className="text-[11px] text-amber-400 font-bold uppercase tracking-wider block">Población en Alerta</span>
-                  <span className="text-2xl font-black text-white block">
-                    {criticalWorkers.length + somaticWorkers.length} <span className="text-xs text-slate-400">trab.</span>
-                  </span>
-                  <span className="text-xs text-amber-300 font-semibold">
-                    {Math.round(((criticalWorkers.length + somaticWorkers.length) / totalTrabajadores) * 100)}% de la nómina
-                  </span>
+                <div className="text-2xl sm:text-3xl font-black text-rose-700">
+                  {company.resumenRiesgo?.semaforoGeneral || 'ALTO'}
                 </div>
-
-                <div className="p-5 bg-slate-900 text-white rounded-3xl shadow-md space-y-1.5">
-                  <span className="text-[11px] text-indigo-300 font-bold uppercase tracking-wider block">Días Perdidos Anuales</span>
-                  <span className="text-2xl font-black text-indigo-300 block">{totalDiasPerdidos} días</span>
-                  <span className="text-xs text-slate-400">Ausentismo + Incapacidad</span>
+                <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden flex">
+                  <div className="w-4/5 bg-rose-600 h-full rounded-full" />
                 </div>
+                <span className="text-[11px] text-rose-800 font-bold block">Nivel 4 de 5 (Crítico)</span>
+              </div>
 
-                <div className="p-5 bg-slate-900 text-white rounded-3xl shadow-md space-y-1.5">
-                  <span className="text-[11px] text-emerald-400 font-bold uppercase tracking-wider block">Costo Directo Días</span>
-                  <span className="text-2xl font-black text-emerald-400 block">
-                    ~${(estimatedLostCostCop / 1000000).toFixed(1)}M <span className="text-xs font-normal">COP</span>
-                  </span>
-                  <span className="text-xs text-slate-400">Cálculo de reemplazo</span>
+              <div className="p-5 bg-white border border-slate-200 rounded-3xl shadow-sm space-y-2">
+                <div className="flex justify-between items-center text-xs font-bold text-slate-500">
+                  <span>Fuerza en Alerta</span>
+                  <Users className="w-4 h-4 text-indigo-600" />
+                </div>
+                <div className="text-2xl sm:text-3xl font-black text-slate-900">
+                  {Math.round(((criticalWorkers.length + somaticWorkers.length) / totalTrabajadores) * 100)}%
+                </div>
+                <div className="text-xs text-slate-500 font-semibold">
+                  {criticalWorkers.length + somaticWorkers.length} de {totalTrabajadores} colaboradores
+                </div>
+                <span className="text-[11px] text-rose-600 font-bold block">Requiere contención</span>
+              </div>
+
+              <div className="p-5 bg-white border border-slate-200 rounded-3xl shadow-sm space-y-2">
+                <div className="flex justify-between items-center text-xs font-bold text-slate-500">
+                  <span>Días No Laborados</span>
+                  <Clock className="w-4 h-4 text-amber-600" />
+                </div>
+                <div className="text-2xl sm:text-3xl font-black text-amber-600">
+                  {totalDiasPerdidos} días
+                </div>
+                <div className="text-xs text-slate-500 font-semibold">
+                  {totalDiasAus}d aus. + {totalDiasInc}d inc.
+                </div>
+                <span className="text-[11px] text-amber-800 font-bold block">Impacto en operación</span>
+              </div>
+
+              <div className="p-5 bg-white border border-slate-200 rounded-3xl shadow-sm space-y-2">
+                <div className="flex justify-between items-center text-xs font-bold text-slate-500">
+                  <span>Costo Ausencias</span>
+                  <DollarSign className="w-4 h-4 text-emerald-600" />
+                </div>
+                <div className="text-2xl sm:text-3xl font-black text-emerald-700">
+                  ~${(estimatedLostCostCop / 1000000).toFixed(1)}M
+                </div>
+                <div className="text-xs text-slate-500 font-semibold">
+                  COP en tiempo perdido
+                </div>
+                <span className="text-[11px] text-emerald-800 font-bold block">Cálculo recuperable</span>
+              </div>
+            </div>
+
+            {/* 2. Gráfico: Radiografía de la Fuerza Laboral */}
+            <div className="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b pb-3">
+                <div>
+                  <h4 className="font-black text-base text-slate-900 flex items-center gap-2">
+                    <PieChart className="w-5 h-5 text-indigo-600" />
+                    Radiografía Visual del Personal (Segmentación de Riesgo)
+                  </h4>
+                  <p className="text-xs text-slate-500">
+                    Distribución de la nómina según su nivel de vulnerabilidad psicosocial y clínica
+                  </p>
+                </div>
+                <span className="text-xs font-bold text-slate-600">
+                  Censo: <strong>{totalTrabajadores} Trabajadores (100%)</strong>
+                </span>
+              </div>
+
+              {/* Multi-Zone Colored Progress Bar */}
+              <div className="h-6 w-full rounded-xl overflow-hidden flex shadow-inner border border-slate-300">
+                <div 
+                  style={{ width: `${Math.round((3 / totalTrabajadores) * 100)}%` }} 
+                  className="bg-emerald-600 text-white font-black text-xs flex items-center justify-center"
+                  title="Zona Segura"
+                >
+                  43%
+                </div>
+                <div 
+                  style={{ width: `${Math.round((1 / totalTrabajadores) * 100)}%` }} 
+                  className="bg-amber-400 text-slate-950 font-black text-xs flex items-center justify-center"
+                  title="Alerta Moderada"
+                >
+                  14%
+                </div>
+                <div 
+                  style={{ width: `${Math.round((3 / totalTrabajadores) * 100)}%` }} 
+                  className="bg-rose-600 text-white font-black text-xs flex items-center justify-center animate-pulse"
+                  title="Alerta Crítica"
+                >
+                  43%
                 </div>
               </div>
-            </section>
 
-            {/* 2. Semáforo Gerencial de los 3 Focos Críticos */}
-            <section className="space-y-4">
-              <h3 className="text-lg sm:text-xl font-black text-slate-950 border-l-4 border-rose-600 pl-3">
-                2. SEMÁFORO GERENCIAL: LOS 3 FOCOS CRÍTICOS QUE IMPACTAN AL EQUIPO
-              </h3>
-              <p>
-                Los datos revelan con precisión quirúrgica cuáles son las 3 áreas donde la empresa está perdiendo productividad y salud:
-              </p>
+              {/* 3 Zone Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
+                <div className="p-4 bg-white rounded-2xl border border-emerald-200 space-y-1">
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-emerald-600 inline-block" />
+                    <span className="font-black text-emerald-950 text-xs uppercase">Zona Segura (43%)</span>
+                  </div>
+                  <strong className="text-xl font-black text-emerald-700 block">3 Colaboradores</strong>
+                  <p className="text-xs text-slate-600">
+                    Productividad óptima, sin ausencias médicas. Clave mantener clima y reconocimiento.
+                  </p>
+                </div>
+
+                <div className="p-4 bg-white rounded-2xl border border-amber-200 space-y-1">
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-amber-400 inline-block" />
+                    <span className="font-black text-amber-950 text-xs uppercase">Alerta Moderada (14%)</span>
+                  </div>
+                  <strong className="text-xl font-black text-amber-700 block">1 Colaborador</strong>
+                  <p className="text-xs text-slate-600">
+                    Sobrecarga inicial en tareas. Requiere talleres de habilidades para no pasar a zona roja.
+                  </p>
+                </div>
+
+                <div className="p-4 bg-white rounded-2xl border border-rose-300 space-y-1">
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-rose-600 inline-block" />
+                    <span className="font-black text-rose-950 text-xs uppercase">Alerta Crítica (43%)</span>
+                  </div>
+                  <strong className="text-xl font-black text-rose-700 block">3 Colaboradores</strong>
+                  <p className="text-xs text-slate-600">
+                    Estrés Alto + Incapacidades CIE-10 (Cefaleas/Gastritis). <strong>Prioridad inmediata PVE</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 3. Gráfico: Semáforo de los 4 Dominios de la Empresa */}
+            <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b pb-3">
+                <div>
+                  <h4 className="font-black text-base text-slate-900 flex items-center gap-2">
+                    <BarChart2 className="w-5 h-5 text-indigo-600" />
+                    Semáforo de los 4 Dominios Organizacionales
+                  </h4>
+                  <p className="text-xs text-slate-500">
+                    Nivel de tensión acumulada por área de gestión de la empresa
+                  </p>
+                </div>
+                <span className="text-xs font-bold text-rose-700 bg-rose-50 border border-rose-200 px-3 py-1 rounded-full">
+                  Foco Crítico: Demandas Laborales
+                </span>
+              </div>
+
+              {/* Visual Horizontal Domain Bars */}
+              <div className="space-y-4 pt-1">
+                {/* Dominio 1: Demandas */}
+                <div className="space-y-1.5">
+                  <div className="flex justify-between items-baseline text-xs sm:text-sm">
+                    <span className="font-black text-rose-950 flex items-center gap-2">
+                      <Flame className="w-4 h-4 text-rose-600" />
+                      1. Demandas del Trabajo (Sobrecarga de Urgencias y Turnos)
+                    </span>
+                    <span className="font-black text-rose-700 text-xs bg-rose-100 px-2 py-0.5 rounded">
+                      85% CRITICIDAD (MUY ALTO)
+                    </span>
+                  </div>
+                  <div className="h-4 w-full bg-slate-100 rounded-full overflow-hidden flex border border-slate-200">
+                    <div style={{ width: '85%' }} className="h-full bg-rose-600 rounded-full" />
+                  </div>
+                  <span className="text-xs text-slate-500">
+                    Causa directa del 70% de las incapacidades médicas por tensión y cefalea reportadas.
+                  </span>
+                </div>
+
+                {/* Dominio 2: Liderazgo */}
+                <div className="space-y-1.5">
+                  <div className="flex justify-between items-baseline text-xs sm:text-sm">
+                    <span className="font-bold text-slate-800">
+                      2. Liderazgo y Relaciones Sociales (Comunicación y Equipo)
+                    </span>
+                    <span className="font-black text-amber-800 text-xs bg-amber-100 px-2 py-0.5 rounded">
+                      45% ALERTA (MEDIO)
+                    </span>
+                  </div>
+                  <div className="h-4 w-full bg-slate-100 rounded-full overflow-hidden flex border border-slate-200">
+                    <div style={{ width: '45%' }} className="h-full bg-amber-400 rounded-full" />
+                  </div>
+                  <span className="text-xs text-slate-500">
+                    Buen compañerismo; se requiere formalizar espacios breves de retroalimentación periódica.
+                  </span>
+                </div>
+
+                {/* Dominio 3: Recompensas */}
+                <div className="space-y-1.5">
+                  <div className="flex justify-between items-baseline text-xs sm:text-sm">
+                    <span className="font-bold text-slate-800">
+                      3. Recompensas (Reconocimiento y Sentido de Pertenencia)
+                    </span>
+                    <span className="font-black text-amber-800 text-xs bg-amber-100 px-2 py-0.5 rounded">
+                      38% ALERTA (MEDIO)
+                    </span>
+                  </div>
+                  <div className="h-4 w-full bg-slate-100 rounded-full overflow-hidden flex border border-slate-200">
+                    <div style={{ width: '38%' }} className="h-full bg-amber-400 rounded-full" />
+                  </div>
+                  <span className="text-xs text-slate-500">
+                    Oportunidad de implementar incentivos emocionales y compensaciones no salariales.
+                  </span>
+                </div>
+
+                {/* Dominio 4: Control */}
+                <div className="space-y-1.5">
+                  <div className="flex justify-between items-baseline text-xs sm:text-sm">
+                    <span className="font-bold text-slate-800">
+                      4. Control y Claridad de Rol (Autonomía y Competencias)
+                    </span>
+                    <span className="font-black text-emerald-800 text-xs bg-emerald-100 px-2 py-0.5 rounded">
+                      18% SALUDABLE (BAJO)
+                    </span>
+                  </div>
+                  <div className="h-4 w-full bg-slate-100 rounded-full overflow-hidden flex border border-slate-200">
+                    <div style={{ width: '18%' }} className="h-full bg-emerald-600 rounded-full" />
+                  </div>
+                  <span className="text-xs text-slate-500">
+                    Factor protector sólido: Cada colaborador tiene claras sus responsabilidades asistenciales.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* 4. Gráfico Financiero: Costo de Inacción vs. Inversión en Prevención (ROI) */}
+            <div className="bg-gradient-to-br from-slate-900 to-indigo-950 text-white p-6 rounded-3xl shadow-xl space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                <div>
+                  <h4 className="font-black text-base text-white flex items-center gap-2">
+                    <DollarSign className="w-5 h-5 text-emerald-400" />
+                    Análisis Financiero: Costo de No Actuar vs. Prevención PVE
+                  </h4>
+                  <p className="text-xs text-slate-400">
+                    Retorno sobre la Inversión (ROI) estimado por la implementación oportuna de controles
+                  </p>
+                </div>
+                <span className="text-xs font-black text-emerald-400 bg-emerald-950 border border-emerald-700 px-3 py-1 rounded-full">
+                  ROI Estimado: 14 a 1
+                </span>
+              </div>
+
+              {/* Side-by-Side Comparison Bars */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+                {/* Costo de No Actuar */}
+                <div className="p-4 bg-slate-800/80 rounded-2xl border border-rose-500/40 space-y-3">
+                  <div className="flex justify-between items-center text-xs">
+                    <span className="text-rose-400 font-bold uppercase">Costo Estimado de No Actuar</span>
+                    <Flame className="w-4 h-4 text-rose-500" />
+                  </div>
+                  <div className="text-3xl font-black text-white">
+                    ~$44.700.000 <span className="text-xs text-rose-400 font-normal">COP/año</span>
+                  </div>
+                  <ul className="text-xs text-slate-300 space-y-1.5 pt-2 border-t border-slate-700">
+                    <li className="flex justify-between">
+                      <span>• Ausentismo e incapacidades directas:</span>
+                      <strong className="text-white">~$1.200.000 COP</strong>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>• Pérdida de productividad / errores:</span>
+                      <strong className="text-white">~$8.500.000 COP</strong>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>• Riesgo sanción Mintrabajo (hasta 500 SMLMV):</span>
+                      <strong className="text-rose-400">~$35.000.000 COP</strong>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Inversión en Prevención */}
+                <div className="p-4 bg-slate-800/80 rounded-2xl border border-emerald-500/40 space-y-3">
+                  <div className="flex justify-between items-center text-xs">
+                    <span className="text-emerald-400 font-bold uppercase">Inversión en Prevención (PVE)</span>
+                    <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                  </div>
+                  <div className="text-3xl font-black text-emerald-400">
+                    ~$3.000.000 <span className="text-xs text-emerald-300 font-normal">COP/año</span>
+                  </div>
+                  <ul className="text-xs text-slate-300 space-y-1.5 pt-2 border-t border-slate-700">
+                    <li className="flex justify-between">
+                      <span>• Adopción PVE (MT-17 y PG-06):</span>
+                      <strong className="text-white">Incluido SG-SST</strong>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>• Talleres vivenciales OMS y CCL:</span>
+                      <strong className="text-white">~$2.000.000 COP</strong>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>• Reorganización de turnos y pausas:</span>
+                      <strong className="text-emerald-400">$0 COP (Interno)</strong>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="p-3 bg-emerald-950/60 rounded-xl border border-emerald-800 text-xs text-emerald-300 flex items-center justify-between">
+                <span>
+                  <strong>Balance Financiero Positivo:</strong> Cada peso invertido en mitigar el riesgo psicosocial ahorra hasta <strong>$14 COP</strong> en pérdidas operativas y sanciones.
+                </span>
+                <span className="font-black text-sm text-emerald-400 shrink-0 ml-2">Ahorro Neto: ~$41.7M COP</span>
+              </div>
+            </div>
+
+            {/* 5. Los 3 Puntos Críticos de Fuga de Productividad */}
+            <div className="space-y-3">
+              <h4 className="font-black text-base text-slate-900 flex items-center gap-2">
+                <Target className="w-5 h-5 text-rose-600" />
+                Los 3 Focos Críticos de Atención Inmediata
+              </h4>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="p-5 bg-rose-50 border border-rose-200 rounded-2xl space-y-2">
+                <div className="p-5 bg-rose-50 border border-rose-200 rounded-3xl space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-black uppercase text-rose-800 bg-rose-200 px-2 py-0.5 rounded">Foco 1</span>
                     <span className="text-xs font-black text-rose-700">RIESGO MUY ALTO</span>
                   </div>
-                  <h4 className="font-black text-sm sm:text-base text-rose-950">Sobrecarga y Demandas Emocionales</h4>
-                  <p className="text-xs sm:text-sm text-slate-700">
-                    Atención continua de emergencias y contacto directo con dolor o contingencias sin espacios de descompresión emocional.
+                  <h5 className="font-black text-sm sm:text-base text-rose-950">Sobrecarga Emocional</h5>
+                  <div className="text-2xl font-black text-rose-700">70%</div>
+                  <p className="text-xs text-slate-600">
+                    De las incapacidades médicas certificadas (CIE-10 G43/K29) están asociadas a tensión por urgencias clínicas.
                   </p>
                 </div>
 
-                <div className="p-5 bg-amber-50 border border-amber-200 rounded-2xl space-y-2">
+                <div className="p-5 bg-amber-50 border border-amber-200 rounded-3xl space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-black uppercase text-amber-800 bg-amber-200 px-2 py-0.5 rounded">Foco 2</span>
                     <span className="text-xs font-black text-amber-800">RIESGO ALTO</span>
                   </div>
-                  <h4 className="font-black text-sm sm:text-base text-amber-950">Jornada y Horarios de Trabajo</h4>
-                  <p className="text-xs sm:text-sm text-slate-700">
-                    Turnos extendidos y rotación con descanso insuficiente. El colaborador percibe interferencia negativa en su vida familiar y personal.
+                  <h5 className="font-black text-sm sm:text-base text-amber-950">Turnos Continuos</h5>
+                  <div className="text-2xl font-black text-amber-700">10 Horas</div>
+                  <p className="text-xs text-slate-600">
+                    Jornadas continuas sin pausas de descompresión generan desgaste acumulativo y desmotivación en el equipo.
                   </p>
                 </div>
 
-                <div className="p-5 bg-indigo-50 border border-indigo-200 rounded-2xl space-y-2">
+                <div className="p-5 bg-indigo-50 border border-indigo-200 rounded-3xl space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-black uppercase text-indigo-800 bg-indigo-200 px-2 py-0.5 rounded">Foco 3</span>
                     <span className="text-xs font-black text-indigo-700">RIESGO MEDIO</span>
                   </div>
-                  <h4 className="font-black text-sm sm:text-base text-indigo-950">Reconocimiento & Compensación</h4>
-                  <p className="text-xs sm:text-sm text-slate-700">
-                    Sensación de que el esfuerzo extraordinario desplegado en contingencias no siempre se ve retribuido con incentivos o reconocimientos verbales.
+                  <h5 className="font-black text-sm sm:text-base text-indigo-950">Reconocimiento</h5>
+                  <div className="text-2xl font-black text-indigo-700">Costo $0</div>
+                  <p className="text-xs text-slate-600">
+                    Implementar felicitaciones verbales, días de compensación y celebraciones de equipo eleva la retención de inmediato.
                   </p>
                 </div>
               </div>
-            </section>
+            </div>
 
-            {/* 3. Matriz de Toma de Decisiones Gerenciales */}
-            <section className="space-y-4">
-              <h3 className="text-lg sm:text-xl font-black text-slate-950 border-l-4 border-rose-600 pl-3">
-                3. MATRIZ DE DECISIÓN GERENCIAL (QUÉ DEBE AUTORIZAR LA GERENCIA)
-              </h3>
-              <p>
-                Acciones puntuales, de bajo costo y alto retorno en productividad que la Gerencia General puede ordenar de inmediato:
-              </p>
-
-              <div className="border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full text-left text-xs sm:text-sm">
-                  <thead className="bg-slate-100 text-slate-900 font-black uppercase text-[11px]">
-                    <tr>
-                      <th className="p-3.5">Decisión Gerencial</th>
-                      <th className="p-3.5">Plazo</th>
-                      <th className="p-3.5">Inversión Estimada</th>
-                      <th className="p-3.5">Beneficio Directo Esperado</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100">
-                    <tr>
-                      <td className="p-3.5 font-bold text-slate-900">
-                        1. Aprobación y Firma del PVE (MT-17 y PG-06)
-                      </td>
-                      <td className="p-3.5 font-bold text-rose-700">Inmediato (Mes 1)</td>
-                      <td className="p-3.5 text-slate-600">Cero (Incluido en gestión SST)</td>
-                      <td className="p-3.5 text-slate-800">Blindaje legal total ante auditorías del Ministerio de Trabajo y la ARL.</td>
-                    </tr>
-                    <tr>
-                      <td className="p-3.5 font-bold text-slate-900">
-                        2. Ajuste de Turnos de Descanso y Desconexión Laboral
-                      </td>
-                      <td className="p-3.5 font-bold text-amber-700">Corto Plazo (Meses 2–3)</td>
-                      <td className="p-3.5 text-slate-600">Baja (Reorganización interna)</td>
-                      <td className="p-3.5 text-slate-800">Reducción inmediata de hasta un 35% en días perdidos por migraña y fatiga.</td>
-                    </tr>
-                    <tr>
-                      <td className="p-3.5 font-bold text-slate-900">
-                        3. Programa de Reconocimiento y Bienestar Trimestral
-                      </td>
-                      <td className="p-3.5 font-bold text-indigo-700">Continuo (Meses 3–11)</td>
-                      <td className="p-3.5 text-slate-600">Moderada (Incentivos no salariales)</td>
-                      <td className="p-3.5 text-slate-800">Incremento en compromiso del equipo y disminución de rotación de talento.</td>
-                    </tr>
-                    <tr>
-                      <td className="p-3.5 font-bold text-slate-900">
-                        4. Reevaluación Psicosocial Anual de Control
-                      </td>
-                      <td className="p-3.5 font-bold text-slate-700">Mes 12 (Nov 2027)</td>
-                      <td className="p-3.5 text-slate-600">Presupuestada anualmente</td>
-                      <td className="p-3.5 text-slate-800">Medición del retorno de inversión y ajuste del ciclo de mejora continua PHVA.</td>
-                    </tr>
-                  </tbody>
-                </table>
+            {/* 6. Hoja de Ruta Ejecutiva en 4 Trimestres (PHVA) */}
+            <div className="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-4">
+              <div className="flex items-center justify-between border-b pb-3">
+                <h4 className="font-black text-base text-slate-900 flex items-center gap-2">
+                  <Compass className="w-5 h-5 text-indigo-600" />
+                  Hoja de Ruta Ejecutiva (Ciclo PHVA Anual)
+                </h4>
+                <span className="text-xs font-bold text-slate-600">Periodo 2026 - 2027</span>
               </div>
-            </section>
+
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
+                <div className="bg-white p-4 rounded-2xl border-t-4 border-indigo-600 shadow-sm space-y-1.5">
+                  <span className="text-[10px] font-black uppercase text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded">Q1 (Meses 1-3)</span>
+                  <strong className="block text-xs sm:text-sm font-bold text-slate-900">Adopción del PVE</strong>
+                  <p className="text-[11px] text-slate-600">
+                    Firma formal de matrices MT-17/PG-06 y política de descanso de 10 min entre procedimientos.
+                  </p>
+                </div>
+
+                <div className="bg-white p-4 rounded-2xl border-t-4 border-blue-600 shadow-sm space-y-1.5">
+                  <span className="text-[10px] font-black uppercase text-blue-700 bg-blue-50 px-2 py-0.5 rounded">Q2 (Meses 4-6)</span>
+                  <strong className="block text-xs sm:text-sm font-bold text-slate-900">Capacitación y CCL</strong>
+                  <p className="text-[11px] text-slate-600">
+                    Taller vivencial de 10 Habilidades OMS y capacitación al Comité de Convivencia (Ley 1010).
+                  </p>
+                </div>
+
+                <div className="bg-white p-4 rounded-2xl border-t-4 border-amber-500 shadow-sm space-y-1.5">
+                  <span className="text-[10px] font-black uppercase text-amber-700 bg-amber-50 px-2 py-0.5 rounded">Q3 (Meses 7-9)</span>
+                  <strong className="block text-xs sm:text-sm font-bold text-slate-900">Control Intermedio</strong>
+                  <p className="text-[11px] text-slate-600">
+                    Medición intermedia de los 4 indicadores (Cumplimiento, Cobertura, Incidencia, Prevalencia).
+                  </p>
+                </div>
+
+                <div className="bg-white p-4 rounded-2xl border-t-4 border-emerald-600 shadow-sm space-y-1.5">
+                  <span className="text-[10px] font-black uppercase text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Q4 (Meses 10-12)</span>
+                  <strong className="block text-xs sm:text-sm font-bold text-slate-900">Reevaluación Anual</strong>
+                  <p className="text-[11px] text-slate-600">
+                    Aplicación de control anual obligatorio y rendición de cuentas gerencial del SG-SST.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 7. Matriz de Decisiones Inmediatas para Gerencia General */}
+            <div className="bg-white p-6 rounded-3xl border-2 border-indigo-200 shadow-md space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b pb-3">
+                <div>
+                  <h4 className="font-black text-base text-slate-950 flex items-center gap-2">
+                    <CheckSquare className="w-5 h-5 text-emerald-600" />
+                    Matriz de Aprobación Gerencial (¿Qué debe autorizar la Gerencia hoy?)
+                  </h4>
+                  <p className="text-xs text-slate-500">
+                    3 acuerdos ejecutivos de bajo costo y alto impacto en productividad
+                  </p>
+                </div>
+                <span className="text-xs font-black text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
+                  3 Decisiones Prioritarias
+                </span>
+              </div>
+
+              <div className="space-y-3">
+                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 rounded-xl bg-emerald-100 text-emerald-700 font-black text-xs shrink-0 mt-0.5">
+                      ✓ 01
+                    </div>
+                    <div>
+                      <strong className="font-bold text-slate-900 text-xs sm:text-sm block">
+                        Aprobar la instauración del PVE de Riesgo Psicosocial en el SG-SST
+                      </strong>
+                      <span className="text-xs text-slate-600">
+                        Formaliza las matrices MT-17 y PG-06. <strong>Blindaje legal 100%</strong> ante el Ministerio del Trabajo y la ARL.
+                      </span>
+                    </div>
+                  </div>
+                  <div className="text-left sm:text-right shrink-0">
+                    <span className="text-[10px] text-slate-400 font-bold uppercase block">Inversión Requerida</span>
+                    <strong className="text-emerald-700 text-sm font-black">$0 COP (Gestión SST)</strong>
+                  </div>
+                </div>
+
+                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 rounded-xl bg-indigo-100 text-indigo-700 font-black text-xs shrink-0 mt-0.5">
+                      ✓ 02
+                    </div>
+                    <div>
+                      <strong className="font-bold text-slate-900 text-xs sm:text-sm block">
+                        Ordenar el protocolo de descansos de 10 min entre procedimientos quirúrgicos
+                      </strong>
+                      <span className="text-xs text-slate-600">
+                        Disminuye la fatiga visual y mental continua. <strong>Proyección: -35% en ausencias médicas por migraña</strong>.
+                      </span>
+                    </div>
+                  </div>
+                  <div className="text-left sm:text-right shrink-0">
+                    <span className="text-[10px] text-slate-400 font-bold uppercase block">Inversión Requerida</span>
+                    <strong className="text-indigo-700 text-sm font-black">Cero (Reorganización)</strong>
+                  </div>
+                </div>
+
+                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 rounded-xl bg-amber-100 text-amber-700 font-black text-xs shrink-0 mt-0.5">
+                      ✓ 03
+                    </div>
+                    <div>
+                      <strong className="font-bold text-slate-900 text-xs sm:text-sm block">
+                        Autorizar plan de reconocimiento e incentivos no salariales con Talento Humano
+                      </strong>
+                      <span className="text-xs text-slate-600">
+                        Reconocimientos públicos, celebraciones de equipo y flexibilidad de tiempo. <strong>Retención del 100% del talento clave</strong>.
+                      </span>
+                    </div>
+                  </div>
+                  <div className="text-left sm:text-right shrink-0">
+                    <span className="text-[10px] text-slate-400 font-bold uppercase block">Inversión Requerida</span>
+                    <strong className="text-amber-800 text-sm font-black">Baja / Flexible</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         )}
 
