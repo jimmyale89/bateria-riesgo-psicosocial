@@ -357,7 +357,15 @@ export default function PveManagementView({
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2">
+            <button
+              onClick={() => onNavigateTab('triada')}
+              className="flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-bold px-3.5 py-2 rounded-xl text-xs shadow-md transition-all"
+              title="Cruzar con reportes de Ausentismo e Incapacidades Médicas CIE-10"
+            >
+              <Activity className="w-4 h-4 text-purple-200" />
+              Tríada (Ausentismo & CIE-10)
+            </button>
             <button
               onClick={() => setActiveSubTab('documentacion')}
               className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-3.5 py-2 rounded-xl text-xs border border-white/20 transition-all"

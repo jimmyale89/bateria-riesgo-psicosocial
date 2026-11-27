@@ -8,11 +8,16 @@ import CreditsSaasView from './components/CreditsSaasView';
 import WorkerSurveyView from './components/WorkerSurveyView';
 import CompanyManagementView from './components/CompanyManagementView';
 import PveManagementView from './components/PveManagementView';
+import TriadaEpidemiologicaView from './components/TriadaEpidemiologicaView';
 import { 
   INITIAL_COMPANIES, 
   INITIAL_COMPANY_DATA_MAP, 
   SPECIALIST_PROFILE 
 } from './data/mockData';
+import { 
+  INITIAL_AUSENTISMO_RECORDS, 
+  INITIAL_INCAPACIDADES_RECORDS 
+} from './data/triadaData';
 import { Coins, X, Check } from 'lucide-react';
 
 export default function App() {
@@ -21,6 +26,8 @@ export default function App() {
   const [activeCompanyId, setActiveCompanyId] = useState('emp-001');
   const [companyDataMap, setCompanyDataMap] = useState(INITIAL_COMPANY_DATA_MAP);
   const [credits, setCredits] = useState(SPECIALIST_PROFILE.saldoCreditosSaaS);
+  const [ausentismoRecords, setAusentismoRecords] = useState(INITIAL_AUSENTISMO_RECORDS);
+  const [incapacidadesRecords, setIncapacidadesRecords] = useState(INITIAL_INCAPACIDADES_RECORDS);
 
   const [selectedWorkerId, setSelectedWorkerId] = useState('B1');
   const [isCreditModalOpen, setIsCreditModalOpen] = useState(false);
@@ -106,6 +113,23 @@ export default function App() {
     }));
 
     alert(`¡Módulo PVE activado con éxito para la empresa!`);
+  };
+
+  // Absenteeism and Incapacities Handlers (Tríada)
+  const handleAddAusentismo = (newRecord) => {
+    setAusentismoRecords(prev => [newRecord, ...prev]);
+  };
+
+  const handleAddIncapacidad = (newRecord) => {
+    setIncapacidadesRecords(prev => [newRecord, ...prev]);
+  };
+
+  const handleBatchImportAusentismo = (newRecords) => {
+    setAusentismoRecords(prev => [...newRecords, ...prev]);
+  };
+
+  const handleBatchImportIncapacidades = (newRecords) => {
+    setIncapacidadesRecords(prev => [...newRecords, ...prev]);
   };
 
   // Add individual worker
@@ -350,7 +374,22 @@ export default function App() {
           />
         )}
 
-        {/* Tab 5: PVE / SVE Module */}
+        {/* Tab 5: Tríada Epidemiológica */}
+        {activeTab === 'triada' && (
+          <TriadaEpidemiologicaView
+            company={companyForViews}
+            workers={activeWorkers}
+            ausentismoRecords={ausentismoRecords}
+            incapacidadesRecords={incapacidadesRecords}
+            onAddAusentismo={handleAddAusentismo}
+            onAddIncapacidad={handleAddIncapacidad}
+            onBatchImportAusentismo={handleBatchImportAusentismo}
+            onBatchImportIncapacidades={handleBatchImportIncapacidades}
+            onNavigateTab={setActiveTab}
+          />
+        )}
+
+        {/* Tab 6: PVE / SVE Module */}
         {activeTab === 'pve' && (
           <PveManagementView
             company={companyForViews}
@@ -362,7 +401,7 @@ export default function App() {
           />
         )}
 
-        {/* Tab 6: SaaS Credits */}
+        {/* Tab 7: SaaS Credits */}
         {activeTab === 'credits' && (
           <CreditsSaasView
             company={companyForViews}

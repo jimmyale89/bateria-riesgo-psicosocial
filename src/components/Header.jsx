@@ -12,7 +12,8 @@ import {
   Smartphone,
   ChevronDown,
   Stethoscope,
-  ShieldAlert
+  ShieldAlert,
+  Activity
 } from 'lucide-react';
 
 export default function Header({ 
@@ -164,6 +165,18 @@ export default function Header({
           >
             <FileText className="w-4 h-4" />
             Informes Oficiales
+          </button>
+
+          <button
+            onClick={() => setActiveTab('triada')}
+            className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold transition-colors ${
+              activeTab === 'triada'
+                ? 'bg-purple-50 text-purple-700 border border-purple-200'
+                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+            }`}
+          >
+            <Activity className="w-4 h-4 text-purple-600" />
+            Tríada Epidemiológica
           </button>
 
           <button
