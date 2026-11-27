@@ -9,15 +9,19 @@ import {
   Check, 
   FileSpreadsheet, 
   X,
-  AlertCircle 
+  AlertCircle,
+  UploadCloud,
+  Download
 } from 'lucide-react';
 import RiskBadge from './RiskBadge';
+import ExcelUploaderModal from './ExcelUploaderModal';
 
-export default function WorkersView({ workers, company, onAddWorker, onSelectWorkerForAudit }) {
+export default function WorkersView({ workers, company, onAddWorker, onImportBatchWorkers, onSelectWorkerForAudit }) {
   const [filterForm, setFilterForm] = useState('ALL');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedWorkerDetail, setSelectedWorkerDetail] = useState(null);
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const [isExcelModalOpen, setIsExcelModalOpen] = useState(false);
 
   // New worker form state
   const [newNombre, setNewNombre] = useState('');
@@ -94,57 +98,83 @@ export default function WorkersView({ workers, company, onAddWorker, onSelectWor
       {/* Top action & filter bar */}
       <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 className="text-lg font-bold text-slate-900">
-            Registro de Colaboradores Evaluados
-          </h2>
+          <div className="flex items-center gap-2">
+            <h2 className="text-lg font-bold text-slate-900">
+              Registro de Colaboradores Evaluados
+            </h2>
+            <span className="bg-indigo-100 text-indigo-800 text-xs font-bold px-2 py-0.5 rounded-full">
+              {workers.length} participantes
+            </span>
+          </div>
           <p className="text-xs text-slate-500 mt-0.5">
-            Total {workers.length} participantes tabulados (Población mixta Forma A y Forma B)
+            Población mixta (Forma A: Jefes/Profesionales • Forma B: Auxiliares/Operarios)
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-3">
-          {/* Search box */}
-          <div className="relative">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
-            <input
-              type="text"
-              placeholder="Buscar por nombre o cédula..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg w-56 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-            />
-          </div>
+        <div className="flex flex-wrap items-center gap-2.5">
+          {/* Download 1-Sheet Template */}
+          <a
+            href="./PLANTILLA_UNICA_BATERIA_RIESGO_PSICOSOCIAL.xlsx"
+            download="PLANTILLA_UNICA_BATERIA_RIESGO_PSICOSOCIAL.xlsx"
+            className="flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-3 py-2 rounded-lg border border-slate-300 transition-colors"
+            title="Descargar formato Excel de 1 sola hoja para diligenciar"
+          >
+            <Download className="w-3.5 h-3.5 text-slate-600" />
+            Descargar Plantilla 1 Hoja
+          </a>
 
-          {/* Form filter */}
-          <div className="flex items-center bg-slate-100 p-1 rounded-lg text-xs font-medium">
-            <button
-              onClick={() => setFilterForm('ALL')}
-              className={`px-2.5 py-1 rounded-md transition-all ${filterForm === 'ALL' ? 'bg-white text-slate-900 shadow-sm font-bold' : 'text-slate-600'}`}
-            >
-              Todos ({workers.length})
-            </button>
-            <button
-              onClick={() => setFilterForm('A')}
-              className={`px-2.5 py-1 rounded-md transition-all ${filterForm === 'A' ? 'bg-indigo-600 text-white shadow-sm font-bold' : 'text-slate-600'}`}
-            >
-              Forma A (3)
-            </button>
-            <button
-              onClick={() => setFilterForm('B')}
-              className={`px-2.5 py-1 rounded-md transition-all ${filterForm === 'B' ? 'bg-indigo-600 text-white shadow-sm font-bold' : 'text-slate-600'}`}
-            >
-              Forma B (4)
-            </button>
-          </div>
+          {/* Upload Excel Button */}
+          <button
+            onClick={() => setIsExcelModalOpen(true)}
+            className="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-3 py-2 rounded-lg shadow transition-colors"
+          >
+            <UploadCloud className="w-4 h-4" />
+            Subir Excel (1 Hoja)
+          </button>
 
-          {/* Add Worker Button (Consumes 1 Credit) */}
+          {/* Add Worker Manually Button */}
           <button
             onClick={() => setIsAddModalOpen(true)}
-            className="flex items-center gap-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs px-3.5 py-2 rounded-lg shadow transition-colors"
+            className="flex items-center gap-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs px-3 py-2 rounded-lg shadow transition-colors"
           >
             <UserPlus className="w-4 h-4" />
-            Ingresar Colaborador (-1 Crédito)
+            Ingreso Manual (-1 Crédito)
           </button>
+        </div>
+      </div>
+
+      {/* Filter and Search Bar */}
+      <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div className="flex items-center bg-slate-100 p-1 rounded-lg text-xs font-medium">
+          <button
+            onClick={() => setFilterForm('ALL')}
+            className={`px-3 py-1 rounded-md transition-all ${filterForm === 'ALL' ? 'bg-white text-slate-900 shadow-sm font-bold' : 'text-slate-600'}`}
+          >
+            Todos ({workers.length})
+          </button>
+          <button
+            onClick={() => setFilterForm('A')}
+            className={`px-3 py-1 rounded-md transition-all ${filterForm === 'A' ? 'bg-indigo-600 text-white shadow-sm font-bold' : 'text-slate-600'}`}
+          >
+            Forma A ({workers.filter(w => w.formType === 'A').length})
+          </button>
+          <button
+            onClick={() => setFilterForm('B')}
+            className={`px-3 py-1 rounded-md transition-all ${filterForm === 'B' ? 'bg-indigo-600 text-white shadow-sm font-bold' : 'text-slate-600'}`}
+          >
+            Forma B ({workers.filter(w => w.formType === 'B').length})
+          </button>
+        </div>
+
+        <div className="relative">
+          <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+          <input
+            type="text"
+            placeholder="Buscar por nombre, cargo o cédula..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="pl-9 pr-3 py-1.5 text-xs border border-slate-300 rounded-lg w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
         </div>
       </div>
 
@@ -307,7 +337,7 @@ export default function WorkersView({ workers, company, onAddWorker, onSelectWor
         </div>
       )}
 
-      {/* Modal: Add Worker (Demonstrates SaaS Credit Consumption) */}
+      {/* Modal: Add Worker (Consumes 1 Credit) */}
       {isAddModalOpen && (
         <div className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <form onSubmit={handleCreateWorker} className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4 animate-in fade-in zoom-in-95 duration-150">
@@ -423,6 +453,14 @@ export default function WorkersView({ workers, company, onAddWorker, onSelectWor
           </form>
         </div>
       )}
+
+      {/* Modal: Excel 1-Sheet Drag & Drop Uploader */}
+      <ExcelUploaderModal
+        isOpen={isExcelModalOpen}
+        onClose={() => setIsExcelModalOpen(false)}
+        onImportWorkers={onImportBatchWorkers}
+        availableCredits={company.saldoCreditosSaaS.creditosDisponibles}
+      />
     </div>
   );
 }

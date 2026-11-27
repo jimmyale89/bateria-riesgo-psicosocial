@@ -27,7 +27,7 @@ export default function App() {
     }));
   };
 
-  // Add worker handler (consumes 1 credit)
+  // Add individual worker handler (consumes 1 credit)
   const handleAddWorker = (newWorker) => {
     setWorkers(prev => [...prev, newWorker]);
     setCompany(prev => ({
@@ -38,6 +38,21 @@ export default function App() {
         creditosDisponibles: prev.saldoCreditosSaaS.creditosDisponibles - 1
       }
     }));
+  };
+
+  // Batch import workers from 1-sheet Excel
+  const handleImportBatchWorkers = (newWorkersList) => {
+    const count = newWorkersList.length;
+    setWorkers(prev => [...prev, ...newWorkersList]);
+    setCompany(prev => ({
+      ...prev,
+      saldoCreditosSaaS: {
+        ...prev.saldoCreditosSaaS,
+        creditosConsumidos: prev.saldoCreditosSaaS.creditosConsumidos + count,
+        creditosDisponibles: prev.saldoCreditosSaaS.creditosDisponibles - count
+      }
+    }));
+    alert(`¡Éxito! Se han importado y calificado ${count} colaboradores. Se consumieron ${count} créditos.`);
   };
 
   // Select worker for audit
@@ -71,6 +86,7 @@ export default function App() {
             workers={workers}
             company={company}
             onAddWorker={handleAddWorker}
+            onImportBatchWorkers={handleImportBatchWorkers}
             onSelectWorkerForAudit={handleSelectWorkerForAudit}
           />
         )}
