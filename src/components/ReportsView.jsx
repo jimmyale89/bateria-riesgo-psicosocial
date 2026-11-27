@@ -32,7 +32,8 @@ import {
   ArrowUpRight,
   CheckSquare,
   Flame,
-  ShieldAlert
+  ShieldAlert,
+  Compass
 } from 'lucide-react';
 import RiskBadge from './RiskBadge';
 import { COMPANY_SUMMARY_STATS } from '../data/mockData';
