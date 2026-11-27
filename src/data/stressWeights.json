@@ -1,0 +1,157 @@
+[
+  {
+    "item": 1,
+    "formula": "+C161*9+D161*6+E161*3+G161*0",
+    "text": "Dolores en el cuello y espalda o tensión muscular"
+  },
+  {
+    "item": 2,
+    "formula": "+C162*9+D162*6+E162*3+G162*0",
+    "text": "Problemas gastrointestinales, úlcera péptica, acidez, problemas digestivos o del colon"
+  },
+  {
+    "item": 3,
+    "formula": "+C163*9+D163*6+E163*3+G163*0",
+    "text": "Problemas respiratorios"
+  },
+  {
+    "item": 4,
+    "formula": "+C164*6+D164*4+E164*2+G164*0",
+    "text": "Dolor de cabeza"
+  },
+  {
+    "item": 5,
+    "formula": "+C165*6+D165*4+E165*2+G165*0",
+    "text": "Trastornos del sueño como somnolencia durante el día o desvelo en la noche"
+  },
+  {
+    "item": 6,
+    "formula": "+C166*6+D166*4+E166*2+G166*0",
+    "text": "Palpitaciones en el pecho o problemas cardíacos"
+  },
+  {
+    "item": 7,
+    "formula": "+C167*3+D167*2+E167*1+G167*0",
+    "text": "Cambios fuertes al apetito"
+  },
+  {
+    "item": 8,
+    "formula": "+C168*3+D168*2+E168*1+G168*0",
+    "text": "Problemas relacionados con la función de los órganos genitales (Impotencia, frigidez)"
+  },
+  {
+    "item": 9,
+    "formula": "+C169*9+D169*6+E169*3+G169*0",
+    "text": "Dificultad en las relaciones familiares "
+  },
+  {
+    "item": 10,
+    "formula": "+C170*6+D170*4+E170*2+G170*0",
+    "text": "Dificultad para permanecer quieto o dificultad para iniciar actividades"
+  },
+  {
+    "item": 11,
+    "formula": "+C171*6+D171*4+E171*2+G171*0",
+    "text": "Dificultad en las relaciones con otras personas"
+  },
+  {
+    "item": 12,
+    "formula": "+C172*3+D172*2+E172*1+G172*0",
+    "text": "Sensación de aislamiento y desisnterés"
+  },
+  {
+    "item": 13,
+    "formula": "+C173*9+D173*6+E173*3+G173*0",
+    "text": "Sentimiento de sobrecarga de trabajo"
+  },
+  {
+    "item": 14,
+    "formula": "+C174*9+D174*6+E174*3+G174*0",
+    "text": "Dificultad para concentrarse, olvidos frecuentes"
+  },
+  {
+    "item": 15,
+    "formula": "+C175*9+D175*6+E175*3+G175*0",
+    "text": "Aumento en el número de accidentes de trabajo"
+  },
+  {
+    "item": 16,
+    "formula": "+C176*6+D176*4+E176*2+G176*0",
+    "text": "Sentimiento de frustración, de no haber hecho lo que se quería en la vida"
+  },
+  {
+    "item": 17,
+    "formula": "+C177*6+D177*4+E177*2+G177*0",
+    "text": "Cansancio, tedio o desgano"
+  },
+  {
+    "item": 18,
+    "formula": "+C178*6+D178*4+E178*2+G178*0",
+    "text": "Disminución del rendimiento en el trabajo o poca creatividad"
+  },
+  {
+    "item": 19,
+    "formula": "+C179*6+D179*4+E179*2+G179*0",
+    "text": "Deseo de no asistir al trabajo"
+  },
+  {
+    "item": 20,
+    "formula": "+C180*3+D180*2+E180*1+G180*0",
+    "text": "Bajo compromiso o poco interés con lo que se hace"
+  },
+  {
+    "item": 21,
+    "formula": "+C181*3+D181*2+E181*1+G181*0",
+    "text": "Dificultad para tomar decisiones "
+  },
+  {
+    "item": 22,
+    "formula": "+C182*3+D182*2+E182*1+G182*0",
+    "text": "Deseo de cambiar de empleo"
+  },
+  {
+    "item": 23,
+    "formula": "+C183*9+D183*6+E183*3+G183*0",
+    "text": "Sentimiento de soledad y miedo"
+  },
+  {
+    "item": 24,
+    "formula": "+C184*9+D184*6+E184*3+G184*0",
+    "text": "Sentimiento de irritabilidad, actitudes y pensamientos negativos"
+  },
+  {
+    "item": 25,
+    "formula": "+C185*6+D185*4+E185*2+G185*0",
+    "text": "Sentimiento de angustia, preocupación o tristeza"
+  },
+  {
+    "item": 26,
+    "formula": "+C186*6+D186*4+E186*2+G186*0",
+    "text": "Consumo de drogas para aliviar la tensión o los nervios"
+  },
+  {
+    "item": 27,
+    "formula": "+C187*6+D187*4+E187*2+G187*0",
+    "text": "Sentimiento de que \"no vale nada\", o \"no sirve para nada\""
+  },
+  {
+    "item": 28,
+    "formula": "+C188*6+D188*4+E188*2+G188*0",
+    "text": "Consumo de bebidas alcohólicas o café o cigarrillo"
+  },
+  {
+    "item": 29,
+    "formula": "+C189*3+D189*2+E189*1+G189*0",
+    "text": "Sentimiento de que está perdiendo la razón"
+  },
+  {
+    "item": 30,
+    "formula": "+C190*3+D190*2+E190*1+G190*0",
+    "text": "Comportamientos rígidos, obstinación o terquedad"
+  },
+  {
+    "item": 31,
+    "formula": "+C191*3+D191*2+E191*1+G191*0",
+    "text": "Sensación de no poder manejar los problemas de la vida"
+  }
+]

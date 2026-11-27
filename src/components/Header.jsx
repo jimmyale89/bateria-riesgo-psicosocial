@@ -8,10 +8,11 @@ import {
   BarChart3, 
   Users, 
   Sliders, 
-  CreditCard 
+  CreditCard,
+  Smartphone
 } from 'lucide-react';
 
-export default function Header({ activeTab, setActiveTab, company, onOpenCreditModal }) {
+export default function Header({ activeTab, setActiveTab, company, onOpenCreditModal, onOpenSurvey }) {
   const credits = company.saldoCreditosSaaS;
 
   return (
@@ -31,9 +32,19 @@ export default function Header({ activeTab, setActiveTab, company, onOpenCreditM
           </div>
 
           <div className="flex items-center gap-3">
+            {/* Open Mobile Survey Button */}
+            <button
+              onClick={onOpenSurvey}
+              className="flex items-center gap-1.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-2.5 py-1 rounded text-xs shadow-sm transition-all"
+              title="Abrir vista de encuesta digital para el trabajador"
+            >
+              <Smartphone className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Simular</span> Encuesta Móvil
+            </button>
+
             <div className="flex items-center gap-2 bg-slate-800/80 px-3 py-1 rounded-md border border-slate-700">
               <Coins className="w-4 h-4 text-amber-400 animate-pulse" />
-              <span>Bolsa de Créditos:</span>
+              <span>Bolsa:</span>
               <span className="text-emerald-400 font-bold text-sm">{credits.creditosDisponibles} disp.</span>
               <span className="text-slate-400 text-[11px]">({credits.creditosConsumidos} usados)</span>
             </div>

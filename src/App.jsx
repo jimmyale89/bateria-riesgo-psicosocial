@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import DashboardView from './components/DashboardView';
 import WorkersView from './components/WorkersView';
 import FormulaAuditorView from './components/FormulaAuditorView';
 import ReportsView from './components/ReportsView';
 import CreditsSaasView from './components/CreditsSaasView';
+import WorkerSurveyView from './components/WorkerSurveyView';
 import { INITIAL_COMPANY, INITIAL_WORKERS } from './data/mockData';
 import { Coins, X, Check } from 'lucide-react';
 
@@ -12,8 +13,16 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [company, setCompany] = useState(INITIAL_COMPANY);
   const [workers, setWorkers] = useState(INITIAL_WORKERS);
-  const [selectedWorkerId, setSelectedWorkerId] = useState('B1'); // defaults to B1
+  const [selectedWorkerId, setSelectedWorkerId] = useState('B1');
   const [isCreditModalOpen, setIsCreditModalOpen] = useState(false);
+  const [isSurveyMode, setIsSurveyMode] = useState(false);
+
+  // Check if URL contains ?survey=true (para abrir directo modo trabajador)
+  useEffect(() => {
+    if (window.location.search.includes('survey=true')) {
+      setIsSurveyMode(true);
+    }
+  }, []);
 
   // Recharge credits handler
   const handleRechargeCredits = (amount) => {
@@ -55,11 +64,35 @@ export default function App() {
     alert(`¡Éxito! Se han importado y calificado ${count} colaboradores. Se consumieron ${count} créditos.`);
   };
 
+  // Submit survey from worker survey view
+  const handleSubmitSurvey = (newEvaluatedWorker) => {
+    setWorkers(prev => [...prev, newEvaluatedWorker]);
+    setCompany(prev => ({
+      ...prev,
+      saldoCreditosSaaS: {
+        ...prev.saldoCreditosSaaS,
+        creditosConsumidos: prev.saldoCreditosSaaS.creditosConsumidos + 1,
+        creditosDisponibles: prev.saldoCreditosSaaS.creditosDisponibles - 1
+      }
+    }));
+  };
+
   // Select worker for audit
   const handleSelectWorkerForAudit = (workerId) => {
     setSelectedWorkerId(workerId);
     setActiveTab('auditor');
   };
+
+  // If in survey mode, render full screen survey
+  if (isSurveyMode) {
+    return (
+      <WorkerSurveyView
+        company={company}
+        onSubmitSurvey={handleSubmitSurvey}
+        onExitSurvey={() => setIsSurveyMode(false)}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
@@ -69,6 +102,7 @@ export default function App() {
         setActiveTab={setActiveTab}
         company={company}
         onOpenCreditModal={() => setIsCreditModalOpen(true)}
+        onOpenSurvey={() => setIsSurveyMode(true)}
       />
 
       {/* Main Tab Content */}
