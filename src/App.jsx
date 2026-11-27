@@ -9,6 +9,7 @@ import WorkerSurveyView from './components/WorkerSurveyView';
 import CompanyManagementView from './components/CompanyManagementView';
 import PveManagementView from './components/PveManagementView';
 import TriadaEpidemiologicaView from './components/TriadaEpidemiologicaView';
+import ErrorBoundary from './components/ErrorBoundary';
 import { 
   INITIAL_COMPANIES, 
   INITIAL_COMPANY_DATA_MAP, 
@@ -325,7 +326,8 @@ export default function App() {
 
       {/* Main Tab Content */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 py-6">
-        {/* Tab 0: Companies Directory */}
+        <ErrorBoundary onReset={() => setActiveTab('dashboard')}>
+          {/* Tab 0: Companies Directory */}
         {activeTab === 'companies' && (
           <CompanyManagementView
             companies={companies}
@@ -411,6 +413,7 @@ export default function App() {
             onRechargePveLicenses={handleRechargePveLicenses}
           />
         )}
+        </ErrorBoundary>
       </main>
 
       {/* Global Footer */}
