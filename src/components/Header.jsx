@@ -13,7 +13,8 @@ import {
   ChevronDown,
   Stethoscope,
   ShieldAlert,
-  Activity
+  Activity,
+  Presentation
 } from 'lucide-react';
 
 export default function Header({ 
@@ -165,6 +166,18 @@ export default function Header({
           >
             <FileText className="w-4 h-4" />
             Informes Oficiales
+          </button>
+
+          <button
+            onClick={() => setActiveTab('socializacion')}
+            className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold transition-colors ${
+              activeTab === 'socializacion'
+                ? 'bg-indigo-50 text-indigo-700 border border-indigo-200'
+                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+            }`}
+          >
+            <Presentation className="w-4 h-4 text-indigo-600" />
+            Socialización Web
           </button>
 
           <button

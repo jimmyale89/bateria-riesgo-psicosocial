@@ -9,6 +9,7 @@ import WorkerSurveyView from './components/WorkerSurveyView';
 import CompanyManagementView from './components/CompanyManagementView';
 import PveManagementView from './components/PveManagementView';
 import TriadaEpidemiologicaView from './components/TriadaEpidemiologicaView';
+import SocializationDeckView from './components/SocializationDeckView';
 import ErrorBoundary from './components/ErrorBoundary';
 import { 
   INITIAL_COMPANIES, 
@@ -375,6 +376,15 @@ export default function App() {
             workers={activeWorkers}
             ausentismoRecords={ausentismoRecords}
             incapacidadesRecords={incapacidadesRecords}
+          />
+        )}
+
+        {/* Tab 4.5: Socialización y Sensibilización Web Deck */}
+        {activeTab === 'socializacion' && (
+          <SocializationDeckView
+            company={companyForViews}
+            workers={activeWorkers}
+            onNavigateTab={setActiveTab}
           />
         )}
 
