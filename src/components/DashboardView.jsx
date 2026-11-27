@@ -17,7 +17,8 @@ import RiskBadge from './RiskBadge';
 import { COMPANY_SUMMARY_STATS } from '../data/mockData';
 
 export default function DashboardView({ company, workers, onNavigateTab }) {
-  const stats = COMPANY_SUMMARY_STATS;
+  const stats = company.stats || COMPANY_SUMMARY_STATS;
+
 
   return (
     <div className="space-y-6">

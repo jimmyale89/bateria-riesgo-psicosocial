@@ -6,75 +6,213 @@ import FormulaAuditorView from './components/FormulaAuditorView';
 import ReportsView from './components/ReportsView';
 import CreditsSaasView from './components/CreditsSaasView';
 import WorkerSurveyView from './components/WorkerSurveyView';
-import { INITIAL_COMPANY, INITIAL_WORKERS } from './data/mockData';
+import CompanyManagementView from './components/CompanyManagementView';
+import { 
+  INITIAL_COMPANIES, 
+  INITIAL_COMPANY_DATA_MAP, 
+  SPECIALIST_PROFILE 
+} from './data/mockData';
 import { Coins, X, Check } from 'lucide-react';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('dashboard');
-  const [company, setCompany] = useState(INITIAL_COMPANY);
-  const [workers, setWorkers] = useState(INITIAL_WORKERS);
+  const [activeTab, setActiveTab] = useState('companies'); // Start in companies directory or dashboard
+  const [companies, setCompanies] = useState(INITIAL_COMPANIES);
+  const [activeCompanyId, setActiveCompanyId] = useState('emp-001');
+  const [companyDataMap, setCompanyDataMap] = useState(INITIAL_COMPANY_DATA_MAP);
+  const [credits, setCredits] = useState(SPECIALIST_PROFILE.saldoCreditosSaaS);
+
   const [selectedWorkerId, setSelectedWorkerId] = useState('B1');
   const [isCreditModalOpen, setIsCreditModalOpen] = useState(false);
   const [isSurveyMode, setIsSurveyMode] = useState(false);
+  const [surveyCompanyId, setSurveyCompanyId] = useState('emp-001');
 
-  // Check if URL contains ?survey=true (para abrir directo modo trabajador)
+  // Derive active company & its current data
+  const activeCompany = companies.find(c => c.id === activeCompanyId) || companies[0];
+  const activeData = companyDataMap[activeCompanyId] || {
+    workers: [],
+    stats: {
+      totalParticipantes: 0,
+      participacionFormaA: 0,
+      participacionFormaB: 0,
+      factorIntralaboralGlobal: { formaA: 'SIN EVALUAR', formaB: 'SIN EVALUAR' },
+      dominios: [],
+      factorExtralaboralGlobal: 'SIN EVALUAR',
+      estresGlobal: 'SIN EVALUAR',
+      dimensionesCriticas: [],
+      dimensionesProtectoras: []
+    }
+  };
+
+  const activeWorkers = activeData.workers || [];
+
+  // Check URL params on load (e.g. ?survey=true or ?companyId=emp-002&survey=true)
   useEffect(() => {
-    if (window.location.search.includes('survey=true')) {
+    const params = new URLSearchParams(window.location.search);
+    const cId = params.get('companyId');
+    if (cId && companies.some(c => c.id === cId)) {
+      setActiveCompanyId(cId);
+      setSurveyCompanyId(cId);
+    }
+    if (params.get('survey') === 'true') {
       setIsSurveyMode(true);
     }
   }, []);
 
-  // Recharge credits handler
+  // Recharge credits
   const handleRechargeCredits = (amount) => {
-    setCompany(prev => ({
+    setCredits(prev => ({
       ...prev,
-      saldoCreditosSaaS: {
-        ...prev.saldoCreditosSaaS,
-        creditosComprados: prev.saldoCreditosSaaS.creditosComprados + amount,
-        creditosDisponibles: prev.saldoCreditosSaaS.creditosDisponibles + amount
-      }
+      creditosComprados: prev.creditosComprados + amount,
+      creditosDisponibles: prev.creditosDisponibles + amount
     }));
   };
 
-  // Add individual worker handler (consumes 1 credit)
+  // Add individual worker
   const handleAddWorker = (newWorker) => {
-    setWorkers(prev => [...prev, newWorker]);
-    setCompany(prev => ({
+    setCompanyDataMap(prev => {
+      const current = prev[activeCompanyId] || { workers: [] };
+      return {
+        ...prev,
+        [activeCompanyId]: {
+          ...current,
+          workers: [...current.workers, newWorker]
+        }
+      };
+    });
+
+    setCredits(prev => ({
       ...prev,
-      saldoCreditosSaaS: {
-        ...prev.saldoCreditosSaaS,
-        creditosConsumidos: prev.saldoCreditosSaaS.creditosConsumidos + 1,
-        creditosDisponibles: prev.saldoCreditosSaaS.creditosDisponibles - 1
+      creditosConsumidos: prev.creditosConsumidos + 1,
+      creditosDisponibles: prev.creditosDisponibles - 1
+    }));
+
+    // Update company count
+    setCompanies(prev => prev.map(c => {
+      if (c.id === activeCompanyId) {
+        return {
+          ...c,
+          totalParticipantes: c.totalParticipantes + 1,
+          participacionA: newWorker.formType === 'A' ? c.participacionA + 1 : c.participacionA,
+          participacionB: newWorker.formType === 'B' ? c.participacionB + 1 : c.participacionB
+        };
       }
+      return c;
     }));
   };
 
-  // Batch import workers from 1-sheet Excel
+  // Import batch of workers (from 1-sheet Excel)
   const handleImportBatchWorkers = (newWorkersList) => {
     const count = newWorkersList.length;
-    setWorkers(prev => [...prev, ...newWorkersList]);
-    setCompany(prev => ({
+    setCompanyDataMap(prev => {
+      const current = prev[activeCompanyId] || { workers: [] };
+      return {
+        ...prev,
+        [activeCompanyId]: {
+          ...current,
+          workers: [...current.workers, ...newWorkersList]
+        }
+      };
+    });
+
+    setCredits(prev => ({
       ...prev,
-      saldoCreditosSaaS: {
-        ...prev.saldoCreditosSaaS,
-        creditosConsumidos: prev.saldoCreditosSaaS.creditosConsumidos + count,
-        creditosDisponibles: prev.saldoCreditosSaaS.creditosDisponibles - count
-      }
+      creditosConsumidos: prev.creditosConsumidos + count,
+      creditosDisponibles: prev.creditosDisponibles - count
     }));
-    alert(`¡Éxito! Se han importado y calificado ${count} colaboradores. Se consumieron ${count} créditos.`);
+
+    const countA = newWorkersList.filter(w => w.formType === 'A').length;
+    const countB = newWorkersList.filter(w => w.formType === 'B').length;
+
+    setCompanies(prev => prev.map(c => {
+      if (c.id === activeCompanyId) {
+        return {
+          ...c,
+          totalParticipantes: c.totalParticipantes + count,
+          participacionA: c.participacionA + countA,
+          participacionB: c.participacionB + countB
+        };
+      }
+      return c;
+    }));
+
+    alert(`¡Éxito! Se han importado ${count} colaboradores a ${activeCompany.nombre}. Se consumieron ${count} créditos.`);
   };
 
   // Submit survey from worker survey view
   const handleSubmitSurvey = (newEvaluatedWorker) => {
-    setWorkers(prev => [...prev, newEvaluatedWorker]);
-    setCompany(prev => ({
+    const targetCompId = surveyCompanyId || activeCompanyId;
+    setCompanyDataMap(prev => {
+      const current = prev[targetCompId] || { workers: [] };
+      return {
+        ...prev,
+        [targetCompId]: {
+          ...current,
+          workers: [...current.workers, newEvaluatedWorker]
+        }
+      };
+    });
+
+    setCredits(prev => ({
       ...prev,
-      saldoCreditosSaaS: {
-        ...prev.saldoCreditosSaaS,
-        creditosConsumidos: prev.saldoCreditosSaaS.creditosConsumidos + 1,
-        creditosDisponibles: prev.saldoCreditosSaaS.creditosDisponibles - 1
+      creditosConsumidos: prev.creditosConsumidos + 1,
+      creditosDisponibles: prev.creditosDisponibles - 1
+    }));
+
+    setCompanies(prev => prev.map(c => {
+      if (c.id === targetCompId) {
+        return {
+          ...c,
+          totalParticipantes: c.totalParticipantes + 1,
+          participacionA: newEvaluatedWorker.formType === 'A' ? c.participacionA + 1 : c.participacionA,
+          participacionB: newEvaluatedWorker.formType === 'B' ? c.participacionB + 1 : c.participacionB
+        };
+      }
+      return c;
+    }));
+  };
+
+  // Create new company
+  const handleCreateCompany = (newCompany) => {
+    setCompanies(prev => [...prev, newCompany]);
+    setCompanyDataMap(prev => ({
+      ...prev,
+      [newCompany.id]: {
+        company: newCompany,
+        workers: [],
+        stats: {
+          totalParticipantes: 0,
+          participacionFormaA: 0,
+          participacionFormaB: 0,
+          factorIntralaboralGlobal: { formaA: 'SIN EVALUAR', formaB: 'SIN EVALUAR' },
+          dominios: [],
+          factorExtralaboralGlobal: 'SIN EVALUAR',
+          estresGlobal: 'SIN EVALUAR',
+          dimensionesCriticas: [],
+          dimensionesProtectoras: []
+        }
       }
     }));
+    setActiveCompanyId(newCompany.id);
+    setActiveTab('dashboard');
+    alert(`Empresa "${newCompany.nombre}" registrada con éxito.`);
+  };
+
+  // Select company and navigate to dashboard
+  const handleSelectCompany = (companyId) => {
+    setActiveCompanyId(companyId);
+    setActiveTab('dashboard');
+  };
+
+  // Open survey for specific company
+  const handleOpenSurveyForCompany = (companyId) => {
+    setSurveyCompanyId(companyId);
+    setIsSurveyMode(true);
+  };
+
+  // Open Excel uploader for specific company
+  const handleOpenExcelForCompany = (companyId) => {
+    setActiveCompanyId(companyId);
+    setActiveTab('workers');
   };
 
   // Select worker for audit
@@ -83,16 +221,25 @@ export default function App() {
     setActiveTab('auditor');
   };
 
-  // If in survey mode, render full screen survey
+  // If in survey mode, render full screen survey with selected company
   if (isSurveyMode) {
+    const surveyComp = companies.find(c => c.id === surveyCompanyId) || activeCompany;
     return (
       <WorkerSurveyView
-        company={company}
+        company={surveyComp}
         onSubmitSurvey={handleSubmitSurvey}
         onExitSurvey={() => setIsSurveyMode(false)}
       />
     );
   }
+
+  // Inject current specialist, active stats and credits into active company for reports and views
+  const companyForViews = {
+    ...activeCompany,
+    stats: activeData.stats,
+    psicologoEvaluador: SPECIALIST_PROFILE,
+    saldoCreditosSaaS: credits
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
@@ -100,49 +247,72 @@ export default function App() {
       <Header
         activeTab={activeTab}
         setActiveTab={setActiveTab}
-        company={company}
+        companies={companies}
+        activeCompany={activeCompany}
+        onSelectCompany={setActiveCompanyId}
+        credits={credits}
         onOpenCreditModal={() => setIsCreditModalOpen(true)}
-        onOpenSurvey={() => setIsSurveyMode(true)}
+        onOpenSurvey={() => {
+          setSurveyCompanyId(activeCompanyId);
+          setIsSurveyMode(true);
+        }}
       />
 
       {/* Main Tab Content */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 py-6">
+        {/* Tab 0: Companies Directory */}
+        {activeTab === 'companies' && (
+          <CompanyManagementView
+            companies={companies}
+            activeCompanyId={activeCompanyId}
+            onSelectCompany={handleSelectCompany}
+            onCreateCompany={handleCreateCompany}
+            onOpenSurveyForCompany={handleOpenSurveyForCompany}
+            onOpenExcelForCompany={handleOpenExcelForCompany}
+          />
+        )}
+
+        {/* Tab 1: Dashboard */}
         {activeTab === 'dashboard' && (
           <DashboardView
-            company={company}
-            workers={workers}
+            company={companyForViews}
+            workers={activeWorkers}
             onNavigateTab={setActiveTab}
           />
         )}
 
+        {/* Tab 2: Workers */}
         {activeTab === 'workers' && (
           <WorkersView
-            workers={workers}
-            company={company}
+            workers={activeWorkers}
+            company={companyForViews}
             onAddWorker={handleAddWorker}
             onImportBatchWorkers={handleImportBatchWorkers}
             onSelectWorkerForAudit={handleSelectWorkerForAudit}
           />
         )}
 
+        {/* Tab 3: Formula Auditor */}
         {activeTab === 'auditor' && (
           <FormulaAuditorView
-            workers={workers}
+            workers={activeWorkers}
             selectedWorkerId={selectedWorkerId}
             onSelectWorker={setSelectedWorkerId}
           />
         )}
 
+        {/* Tab 4: Official Reports */}
         {activeTab === 'reports' && (
           <ReportsView
-            company={company}
-            workers={workers}
+            company={companyForViews}
+            workers={activeWorkers}
           />
         )}
 
+        {/* Tab 5: SaaS Credits */}
         {activeTab === 'credits' && (
           <CreditsSaasView
-            company={company}
+            company={companyForViews}
             onRechargeCredits={handleRechargeCredits}
           />
         )}
@@ -152,7 +322,7 @@ export default function App() {
       <footer className="bg-white border-t border-slate-200 py-6 text-xs text-slate-500 text-center print:hidden">
         <div className="max-w-7xl mx-auto px-4 space-y-1">
           <p className="font-semibold text-slate-700">
-            Batería de Riesgo Psicosocial Pro • Plataforma Especializada SST
+            Batería de Riesgo Psicosocial Pro • Plataforma Multi-Empresa SaaS SST
           </p>
           <p>
             Desarrollado bajo los lineamientos técnicos de la Resolución 2646 de 2008, 2404 de 2019, 2764 de 2022 y Baremos de la Pontificia Universidad Javeriana.
@@ -171,7 +341,7 @@ export default function App() {
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-slate-900">Recargar Créditos</h3>
-                  <p className="text-[11px] text-slate-500">Saldo actual: {company.saldoCreditosSaaS.creditosDisponibles} disp.</p>
+                  <p className="text-[11px] text-slate-500">Saldo actual: {credits.creditosDisponibles} disp.</p>
                 </div>
               </div>
               <button

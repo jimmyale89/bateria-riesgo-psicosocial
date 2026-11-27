@@ -9,12 +9,20 @@ import {
   Users, 
   Sliders, 
   CreditCard,
-  Smartphone
+  Smartphone,
+  ChevronDown
 } from 'lucide-react';
 
-export default function Header({ activeTab, setActiveTab, company, onOpenCreditModal, onOpenSurvey }) {
-  const credits = company.saldoCreditosSaaS;
-
+export default function Header({ 
+  activeTab, 
+  setActiveTab, 
+  companies,
+  activeCompany, 
+  onSelectCompany,
+  credits,
+  onOpenCreditModal, 
+  onOpenSurvey 
+}) {
   return (
     <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
       {/* Top Banner: Specialist & SaaS Credits Bar */}
@@ -27,7 +35,7 @@ export default function Header({ activeTab, setActiveTab, company, onOpenCreditM
             </span>
             <span className="hidden sm:inline text-slate-400">|</span>
             <span className="hidden sm:inline">
-              Evaluador: <strong className="text-white">{company.psicologoEvaluador.nombre}</strong> (Lic. SST: {company.psicologoEvaluador.licenciaSST})
+              Evaluador: <strong className="text-white">Psic. Especialista Jimmy Martínez</strong> (Lic. SST: LIC-SST-45920-2023)
             </span>
           </div>
 
@@ -74,15 +82,40 @@ export default function Header({ activeTab, setActiveTab, company, onOpenCreditM
                 SaaS Multi-Empresa
               </span>
             </div>
-            <p className="text-xs text-slate-700 font-medium flex items-center gap-1.5">
-              <Building2 className="w-3.5 h-3.5 text-slate-700" />
-              Empresa activa: <strong className="text-slate-900 font-semibold">{company.nombre}</strong> (NIT: {company.nit})
-            </p>
+
+            {/* Quick Company Switcher Dropdown */}
+            <div className="flex items-center gap-1.5 mt-0.5">
+              <Building2 className="w-3.5 h-3.5 text-slate-500 flex-shrink-0" />
+              <span className="text-xs text-slate-500">Cliente:</span>
+              <select
+                value={activeCompany.id}
+                onChange={(e) => onSelectCompany(e.target.value)}
+                className="text-xs font-bold text-slate-900 bg-slate-50 hover:bg-slate-100 border border-slate-300 rounded-lg px-2 py-0.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
+              >
+                {companies.map(c => (
+                  <option key={c.id} value={c.id}>
+                    {c.nombre} (NIT: {c.nit})
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
 
         {/* Tab Navigation */}
         <nav className="flex items-center gap-1 overflow-x-auto pb-1 md:pb-0">
+          <button
+            onClick={() => setActiveTab('companies')}
+            className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold transition-colors ${
+              activeTab === 'companies'
+                ? 'bg-indigo-50 text-indigo-700 border border-indigo-200'
+                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+            }`}
+          >
+            <Building2 className="w-4 h-4" />
+            Empresas ({companies.length})
+          </button>
+
           <button
             onClick={() => setActiveTab('dashboard')}
             className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold transition-colors ${
@@ -104,7 +137,7 @@ export default function Header({ activeTab, setActiveTab, company, onOpenCreditM
             }`}
           >
             <Users className="w-4 h-4" />
-            Colaboradores ({company.saldoCreditosSaaS.creditosConsumidos})
+            Colaboradores
           </button>
 
           <button
@@ -116,7 +149,7 @@ export default function Header({ activeTab, setActiveTab, company, onOpenCreditM
             }`}
           >
             <Sliders className="w-4 h-4" />
-            Auditor de Fórmulas Javeriana
+            Auditor Javeriana
           </button>
 
           <button
@@ -140,7 +173,7 @@ export default function Header({ activeTab, setActiveTab, company, onOpenCreditM
             }`}
           >
             <CreditCard className="w-4 h-4 text-amber-600" />
-            Modelo SaaS & Créditos
+            Créditos SaaS
           </button>
         </nav>
       </div>

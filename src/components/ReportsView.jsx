@@ -17,7 +17,8 @@ import { COMPANY_SUMMARY_STATS } from '../data/mockData';
 
 export default function ReportsView({ company, workers }) {
   const [reportType, setReportType] = useState('technical'); // 'technical' | 'executive'
-  const stats = COMPANY_SUMMARY_STATS;
+  const stats = company.stats || COMPANY_SUMMARY_STATS;
+
 
   const handlePrint = () => {
     window.print();
