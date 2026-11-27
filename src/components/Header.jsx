@@ -10,7 +10,9 @@ import {
   Sliders, 
   CreditCard,
   Smartphone,
-  ChevronDown
+  ChevronDown,
+  Stethoscope,
+  ShieldAlert
 } from 'lucide-react';
 
 export default function Header({ 
@@ -53,8 +55,8 @@ export default function Header({
             <div className="flex items-center gap-2 bg-slate-800/80 px-3 py-1 rounded-md border border-slate-700">
               <Coins className="w-4 h-4 text-amber-400 animate-pulse" />
               <span>Bolsa:</span>
-              <span className="text-emerald-400 font-bold text-sm">{credits.creditosDisponibles} disp.</span>
-              <span className="text-slate-400 text-[11px]">({credits.creditosConsumidos} usados)</span>
+              <span className="text-emerald-400 font-bold text-sm">{credits.creditosDisponibles}</span>
+              <span className="text-slate-400 text-[11px]">| PVE: <strong className="text-rose-400 font-bold">{credits.creditosPveDisponibles ?? 2} lic.</strong></span>
             </div>
             <button
               onClick={onOpenCreditModal}
@@ -162,6 +164,25 @@ export default function Header({
           >
             <FileText className="w-4 h-4" />
             Informes Oficiales
+          </button>
+
+          <button
+            onClick={() => setActiveTab('pve')}
+            className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold transition-colors relative ${
+              activeTab === 'pve'
+                ? 'bg-rose-50 text-rose-700 border border-rose-200'
+                : activeCompany.pveStatus === 'active'
+                ? 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'
+                : 'text-slate-500 hover:text-slate-800 hover:bg-slate-100'
+            }`}
+          >
+            <Stethoscope className="w-4 h-4 text-rose-600" />
+            <span>PVE / SVE</span>
+            {activeCompany.pveStatus === 'active' ? (
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" title="PVE Activo" />
+            ) : activeCompany.pveStatus === 'locked' ? (
+              <span className="text-[9px] bg-rose-100 text-rose-700 px-1 py-0.2 rounded font-black">Requerido</span>
+            ) : null}
           </button>
 
           <button

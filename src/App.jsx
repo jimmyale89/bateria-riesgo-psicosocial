@@ -7,6 +7,7 @@ import ReportsView from './components/ReportsView';
 import CreditsSaasView from './components/CreditsSaasView';
 import WorkerSurveyView from './components/WorkerSurveyView';
 import CompanyManagementView from './components/CompanyManagementView';
+import PveManagementView from './components/PveManagementView';
 import { 
   INITIAL_COMPANIES, 
   INITIAL_COMPANY_DATA_MAP, 
@@ -65,6 +66,46 @@ export default function App() {
       creditosComprados: prev.creditosComprados + amount,
       creditosDisponibles: prev.creditosDisponibles + amount
     }));
+  };
+
+  // Recharge PVE licenses
+  const handleRechargePveLicenses = (licenses) => {
+    setCredits(prev => ({
+      ...prev,
+      creditosPveComprados: (prev.creditosPveComprados || 0) + licenses,
+      creditosPveDisponibles: (prev.creditosPveDisponibles || 0) + licenses
+    }));
+  };
+
+  // Unlock PVE module for a company
+  const handleUnlockPve = (companyId, tokensToSpend = null) => {
+    if (tokensToSpend) {
+      setCredits(prev => ({
+        ...prev,
+        creditosConsumidos: prev.creditosConsumidos + tokensToSpend,
+        creditosDisponibles: prev.creditosDisponibles - tokensToSpend
+      }));
+    } else {
+      setCredits(prev => ({
+        ...prev,
+        creditosPveConsumidos: (prev.creditosPveConsumidos || 0) + 1,
+        creditosPveDisponibles: Math.max(0, (prev.creditosPveDisponibles || 1) - 1)
+      }));
+    }
+
+    setCompanies(prev => prev.map(c => {
+      if (c.id === companyId) {
+        return {
+          ...c,
+          pveStatus: 'active',
+          pveActivadoFecha: new Date().toISOString().split('T')[0],
+          pveLicenciaCodigo: `LIC-PVE-2026-${Math.floor(100 + Math.random() * 900)}`
+        };
+      }
+      return c;
+    }));
+
+    alert(`¡Módulo PVE activado con éxito para la empresa!`);
   };
 
   // Add individual worker
@@ -309,11 +350,24 @@ export default function App() {
           />
         )}
 
-        {/* Tab 5: SaaS Credits */}
+        {/* Tab 5: PVE / SVE Module */}
+        {activeTab === 'pve' && (
+          <PveManagementView
+            company={companyForViews}
+            workers={activeWorkers}
+            credits={credits}
+            onUnlockPve={handleUnlockPve}
+            onRechargeCredits={handleRechargeCredits}
+            onNavigateTab={setActiveTab}
+          />
+        )}
+
+        {/* Tab 6: SaaS Credits */}
         {activeTab === 'credits' && (
           <CreditsSaasView
             company={companyForViews}
             onRechargeCredits={handleRechargeCredits}
+            onRechargePveLicenses={handleRechargePveLicenses}
           />
         )}
       </main>

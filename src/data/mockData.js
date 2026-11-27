@@ -26,7 +26,10 @@ export const INITIAL_COMPANIES = [
     },
     totalParticipantes: 7,
     participacionA: 3,
-    participacionB: 4
+    participacionB: 4,
+    pveStatus: 'active', // Activo para esta empresa
+    pveActivadoFecha: '2026-11-21',
+    pveLicenciaCodigo: 'LIC-PVE-2026-001'
   },
   {
     id: 'emp-002',
@@ -50,7 +53,10 @@ export const INITIAL_COMPANIES = [
     },
     totalParticipantes: 261,
     participacionA: 21,
-    participacionB: 240
+    participacionB: 240,
+    pveStatus: 'not_required', // Riesgo general Medio/Bajo: no exige PVE obligatorio
+    pveActivadoFecha: null,
+    pveLicenciaCodigo: null
   },
   {
     id: 'emp-003',
@@ -74,7 +80,10 @@ export const INITIAL_COMPANIES = [
     },
     totalParticipantes: 35,
     participacionA: 5,
-    participacionB: 30
+    participacionB: 30,
+    pveStatus: 'locked', // Requiere PVE pero aún no se ha activado la licencia
+    pveActivadoFecha: null,
+    pveLicenciaCodigo: null
   }
 ];
 
@@ -88,7 +97,11 @@ export const SPECIALIST_PROFILE = {
     creditosComprados: 500,
     creditosConsumidos: 303, // 7 (Atuesta) + 261 (Arrayanes) + 35 (Transporte)
     creditosDisponibles: 197,
-    costoPorCreditoCop: 12000
+    creditosPveDisponibles: 2, // 2 licencias anuales PVE disponibles
+    creditosPveComprados: 3,
+    creditosPveConsumidos: 1, // 1 usada en Atuesta
+    costoPorCreditoCop: 12000,
+    costoPorLicenciaPveCop: 450000
   }
 };
 
