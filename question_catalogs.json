@@ -1,0 +1,2020 @@
+{
+  "catalogA": {
+    "questionsIntra": [
+      {
+        "id": 1,
+        "text": "El ruido en el lugar donde trabajo es molesto",
+        "polarity": "direct",
+        "formula": "+C5*4+D5*3+E5*2+F5*1+G5*0"
+      },
+      {
+        "id": 2,
+        "text": "En el lugar donde trabajo hace mucho frío",
+        "polarity": "direct",
+        "formula": "+C6*4+D6*3+E6*2+F6*1+G6*0"
+      },
+      {
+        "id": 3,
+        "text": "En el lugar donde trabajo hace mucho calor",
+        "polarity": "direct",
+        "formula": "+C7*4+D7*3+E7*2+F7*1+G7*0"
+      },
+      {
+        "id": 4,
+        "text": "El aire en el lugar donde trabajo es fresco y agradable",
+        "polarity": "inverse",
+        "formula": "+C8*0+D8*1+E8*2+F8*3+G8*4"
+      },
+      {
+        "id": 5,
+        "text": "La luz del sitio donde trabajo es agradable",
+        "polarity": "inverse",
+        "formula": "+C9*0+D9*1+E9*2+F9*3+G9*4"
+      },
+      {
+        "id": 6,
+        "text": "El espacio donde trabajo es cómodo",
+        "polarity": "inverse",
+        "formula": "+C10*0+D10*1+E10*2+F10*3+G10*4"
+      },
+      {
+        "id": 7,
+        "text": "En mi trabajo me preocupa estar expuesto a sustancias químicas que afecten mi salud",
+        "polarity": "direct",
+        "formula": "+C11*4+D11*3+E11*2+F11*1+G11*0"
+      },
+      {
+        "id": 8,
+        "text": "Mi trabajo me exige hacer mucho esfuerzo físico",
+        "polarity": "direct",
+        "formula": "+C12*4+D12*3+E12*2+F12*1+G12*0"
+      },
+      {
+        "id": 9,
+        "text": "Los equipos o herramientas con los que trabajo son cómodos",
+        "polarity": "inverse",
+        "formula": "+C13*0+D13*1+E13*2+F13*3+G13*4"
+      },
+      {
+        "id": 10,
+        "text": "En mi trabajo me preocupa estar expuesto a microbios, animales o plantas que afecten mi salud",
+        "polarity": "direct",
+        "formula": "+C14*4+D14*3+E14*2+F14*1+G14*0"
+      },
+      {
+        "id": 11,
+        "text": "Me preocupa accidentarme en mi trabajo",
+        "polarity": "direct",
+        "formula": "+C15*4+D15*3+E15*2+F15*1+G15*0"
+      },
+      {
+        "id": 12,
+        "text": "El lugar donde trabajo es limpio y ordenado",
+        "polarity": "inverse",
+        "formula": "+C16*0+D16*1+E16*2+F16*3+G16*4"
+      },
+      {
+        "id": 13,
+        "text": "Por la cantidad de trabajo que tengo debo quedarme tiempo adicional",
+        "polarity": "direct",
+        "formula": "+C17*4+D17*3+E17*2+F17*1+G17*0"
+      },
+      {
+        "id": 14,
+        "text": "Me alcanza el tiempo de trabajo para tener al día mis deberes",
+        "polarity": "inverse",
+        "formula": "+C18*0+D18*1+E18*2+F18*3+G18*4"
+      },
+      {
+        "id": 15,
+        "text": "Por la cantidad de trabajo que tengo debo trabajar sin parar",
+        "polarity": "direct",
+        "formula": "+C19*4+D19*3+E19*2+F19*1+G19*0"
+      },
+      {
+        "id": 16,
+        "text": "Mi trabajo me exige hacer mucho esfuerzo mental",
+        "polarity": "direct",
+        "formula": "+C20*4+D20*3+E20*2+F20*1+G20*0"
+      },
+      {
+        "id": 17,
+        "text": "Mi trabajo me exige estar muy concentrado",
+        "polarity": "direct",
+        "formula": "+C21*4+D21*3+E21*2+F21*1+G21*0"
+      },
+      {
+        "id": 18,
+        "text": "Mi trabajo me exige memorizar mucha información",
+        "polarity": "direct",
+        "formula": "+C22*4+D22*3+E22*2+F22*1+G22*0"
+      },
+      {
+        "id": 19,
+        "text": "En mi trabajo tengo que tomar decisiones difíciles muy rápido",
+        "polarity": "direct",
+        "formula": "+C23*4+D23*3+E23*2+F23*1+G23*0"
+      },
+      {
+        "id": 20,
+        "text": "Mi trabajo me exige atender a muchos asuntos al mismo tiempo",
+        "polarity": "direct",
+        "formula": "+C24*4+D24*3+E24*2+F24*1+G24*0"
+      },
+      {
+        "id": 21,
+        "text": "Mi trabajo requiere que me fije en pequeños detalles",
+        "polarity": "direct",
+        "formula": "+C25*4+D25*3+E25*2+F25*1+G25*0"
+      },
+      {
+        "id": 22,
+        "text": "En mi trabajo respondo por cosas de mucho valor",
+        "polarity": "direct",
+        "formula": "+C26*4+D26*3+E26*2+F26*1+G26*0"
+      },
+      {
+        "id": 23,
+        "text": "En mi trabajo respondo por dinero de la empresa",
+        "polarity": "direct",
+        "formula": "+C27*4+D27*3+E27*2+F27*1+G27*0"
+      },
+      {
+        "id": 24,
+        "text": "Como parte de mis funciones debo responder por la seguridad de otros",
+        "polarity": "direct",
+        "formula": "+C28*4+D28*3+E28*2+F28*1+G28*0"
+      },
+      {
+        "id": 25,
+        "text": "Respondo ante mi jefe por los resultados de toda mi área de trabajo",
+        "polarity": "direct",
+        "formula": "+C29*4+D29*3+E29*2+F29*1+G29*0"
+      },
+      {
+        "id": 26,
+        "text": "Mi trabajo me exige cuidar la salud de otras personas",
+        "polarity": "direct",
+        "formula": "+C30*4+D30*3+E30*2+F30*1+G30*0"
+      },
+      {
+        "id": 27,
+        "text": "En mi trabajo me dan órdenes contradictorias",
+        "polarity": "direct",
+        "formula": "+C31*4+D31*3+E31*2+F31*1+G31*0"
+      },
+      {
+        "id": 28,
+        "text": "En mi trabajo me piden hacer cosas innecesarias",
+        "polarity": "direct",
+        "formula": "+C32*4+D32*3+E32*2+F32*1+G32*0"
+      },
+      {
+        "id": 29,
+        "text": "En mi trabajo se presentan situaciones en las que debo pasar por alto normas o procedimientos",
+        "polarity": "direct",
+        "formula": "+C33*4+D33*3+E33*2+F33*1+G33*0"
+      },
+      {
+        "id": 30,
+        "text": "En mi trabajo tengo que hacer  cosas que se podrian hacer de una forma más práctica",
+        "polarity": "direct",
+        "formula": "+C34*4+D34*3+E34*2+F34*1+G34*0"
+      },
+      {
+        "id": 31,
+        "text": "Trabajo en horario de noche",
+        "polarity": "direct",
+        "formula": "+C35*4+D35*3+E35*2+F35*1+G35*0"
+      },
+      {
+        "id": 32,
+        "text": "En mi trabajo es posible tomar pausas para descansar",
+        "polarity": "inverse",
+        "formula": "+C36*0+D36*1+E36*2+F36*3+G36*4"
+      },
+      {
+        "id": 33,
+        "text": "Mi trabajo me exige laborar en días de descanso, festivos o fines de semana",
+        "polarity": "direct",
+        "formula": "+C37*4+D37*3+E37*2+F37*1+G37*0"
+      },
+      {
+        "id": 34,
+        "text": "En mi trabajo puedo tomar fines de semana o días de descanso al mes",
+        "polarity": "inverse",
+        "formula": "+C38*0+D38*1+E38*2+F38*3+G38*4"
+      },
+      {
+        "id": 35,
+        "text": "Cuando estoy en casa sigo pensando en el trabajo",
+        "polarity": "direct",
+        "formula": "+C39*4+D39*3+E39*2+F39*1+G39*0"
+      },
+      {
+        "id": 36,
+        "text": "Discuto con mi familia o amigos por cuasa de mi trabajo",
+        "polarity": "direct",
+        "formula": "+C40*4+D40*3+E40*2+F40*1+G40*0"
+      },
+      {
+        "id": 37,
+        "text": "Debo atender asuntos de trabajo cuando estoy en casa",
+        "polarity": "direct",
+        "formula": "+C41*4+D41*3+E41*2+F41*1+G41*0"
+      },
+      {
+        "id": 38,
+        "text": "Por mi trabajo el tiempo que paso con mi familia y amigos es muy poco",
+        "polarity": "direct",
+        "formula": "+C42*4+D42*3+E42*2+F42*1+G42*0"
+      },
+      {
+        "id": 39,
+        "text": "Mi trabajo me permite desarrollar mis habilidades",
+        "polarity": "inverse",
+        "formula": "+C43*0+D43*1+E43*2+F43*3+G43*4"
+      },
+      {
+        "id": 40,
+        "text": "Mi trabajo me permite aplicar mis conocimientos",
+        "polarity": "inverse",
+        "formula": "+C44*0+D44*1+E44*2+F44*3+G44*4"
+      },
+      {
+        "id": 41,
+        "text": "Mi trabajo me permite aprender nuevas cosas",
+        "polarity": "inverse",
+        "formula": "+C45*0+D45*1+E45*2+F45*3+G45*4"
+      },
+      {
+        "id": 42,
+        "text": "Me asignan el trabajo teniendo en cuenta mis capacidades",
+        "polarity": "inverse",
+        "formula": "+C46*0+D46*1+E46*2+F46*3+G46*4"
+      },
+      {
+        "id": 43,
+        "text": "Puedo tomar pausas cuando las necesito",
+        "polarity": "inverse",
+        "formula": "+C47*0+D47*1+E47*2+F47*3+G47*4"
+      },
+      {
+        "id": 44,
+        "text": "Puedo decidir cuánto trabajo hago en el día",
+        "polarity": "inverse",
+        "formula": "+C48*0+D48*1+E48*2+F48*3+G48*4"
+      },
+      {
+        "id": 45,
+        "text": "Puedo decidir la velocidad  a la que trabajo",
+        "polarity": "inverse",
+        "formula": "+C49*0+D49*1+E49*2+F49*3+G49*4"
+      },
+      {
+        "id": 46,
+        "text": "Puedo cambiar el orden de las actividades en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C50*0+D50*1+E50*2+F50*3+G50*4"
+      },
+      {
+        "id": 47,
+        "text": "Puedo parar un momento mi trabajo para atender algún asunto personal",
+        "polarity": "inverse",
+        "formula": "+C51*0+D51*1+E51*2+F51*3+G51*4"
+      },
+      {
+        "id": 48,
+        "text": "Los cambios en mi trabajo han sido beneficiosos",
+        "polarity": "inverse",
+        "formula": "+C52*0+D52*1+E52*2+F52*3+G52*4"
+      },
+      {
+        "id": 49,
+        "text": "Me explican claramente los cambios que ocurren en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C53*0+D53*1+E53*2+F53*3+G53*4"
+      },
+      {
+        "id": 50,
+        "text": "Puedo dar sugerencias sobre los cambios que ocurren en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C54*0+D54*1+E54*2+F54*3+G54*4"
+      },
+      {
+        "id": 51,
+        "text": "Cuando se presentan cambios en mi trabajo se tienen en cuenta mis ideas y sugerencias",
+        "polarity": "inverse",
+        "formula": "+C55*0+D55*1+E55*2+F55*3+G55*4"
+      },
+      {
+        "id": 52,
+        "text": "Los cambios que se presentan en mi trabajo dificultan mi labor.",
+        "polarity": "direct",
+        "formula": "+C56*4+D56*3+E56*2+F56*1+G56*0"
+      },
+      {
+        "id": 53,
+        "text": "Me informan con claridad cuáles son mis funciones.",
+        "polarity": "inverse",
+        "formula": "+C57*0+D57*1+E57*2+F57*3+G57*4"
+      },
+      {
+        "id": 54,
+        "text": "Me informan cuáles son las decisiones que puedo tomar en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C58*0+D58*1+E58*2+F58*3+G58*4"
+      },
+      {
+        "id": 55,
+        "text": "Me explican claramente los resultados que debo lograr en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C59*0+D59*1+E59*2+F59*3+G59*4"
+      },
+      {
+        "id": 56,
+        "text": "Me explican claramente el efecto de mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C60*0+D60*1+E60*2+F60*3+G60*4"
+      },
+      {
+        "id": 57,
+        "text": "Me explican claramente los objetivos de mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C61*0+D61*1+E61*2+F61*3+G61*4"
+      },
+      {
+        "id": 58,
+        "text": "Me informan claramente quien me puede orientar para hacer mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C62*0+D62*1+E62*2+F62*3+G62*4"
+      },
+      {
+        "id": 59,
+        "text": "Me informan claramente con quien puedo resolver los asuntos de trabajo",
+        "polarity": "inverse",
+        "formula": "+C63*0+D63*1+E63*2+F63*3+G63*4"
+      },
+      {
+        "id": 60,
+        "text": "La empresa me permite asistir a capacitaciones relacionadas con mi trabajo.",
+        "polarity": "inverse",
+        "formula": "+C64*0+D64*1+E64*2+F64*3+G64*4"
+      },
+      {
+        "id": 61,
+        "text": "Recibo capacitación ütil para hacer mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C65*0+D65*1+E65*2+F65*3+G65*4"
+      },
+      {
+        "id": 62,
+        "text": "Recibo capacitación que me ayuda a hacer mejor hacer mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C66*0+D66*1+E66*2+F66*3+G66*4"
+      },
+      {
+        "id": 63,
+        "text": "Mi jefe me da instrucciones claras",
+        "polarity": "inverse",
+        "formula": "+C67*0+D67*1+E67*2+F67*3+G67*4"
+      },
+      {
+        "id": 64,
+        "text": "Mi jefe ayuda a organizar mejor el trabajo",
+        "polarity": "inverse",
+        "formula": "+C68*0+D68*1+E68*2+F68*3+G68*4"
+      },
+      {
+        "id": 65,
+        "text": "Mi jefe tiene en cuenta mis puntos de vista y opiniones",
+        "polarity": "inverse",
+        "formula": "+C69*0+D69*1+E69*2+F69*3+G69*4"
+      },
+      {
+        "id": 66,
+        "text": "Mi jefe me anima para hacer mejor mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C70*0+D70*1+E70*2+F70*3+G70*4"
+      },
+      {
+        "id": 67,
+        "text": "Mi jefe distribuye las tareas de forma que me facilita el trabajo",
+        "polarity": "inverse",
+        "formula": "+C71*0+D71*1+E71*2+F71*3+G71*4"
+      },
+      {
+        "id": 68,
+        "text": "Mi jefe me comunica a tiempo la información relacionada con el trabajo",
+        "polarity": "inverse",
+        "formula": "+C72*0+D72*1+E72*2+F72*3+G72*4"
+      },
+      {
+        "id": 69,
+        "text": "La orientación que me da mi jefe me ayuda a hacer mejor mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C73*0+D73*1+E73*2+F73*3+G73*4"
+      },
+      {
+        "id": 70,
+        "text": "Mi jefe me ayuda a progresar en el trabajo",
+        "polarity": "inverse",
+        "formula": "+C74*0+D74*1+E74*2+F74*3+G74*4"
+      },
+      {
+        "id": 71,
+        "text": "Mi jefe me ayuda a sentirme bien en el trabajo",
+        "polarity": "inverse",
+        "formula": "+C75*0+D75*1+E75*2+F75*3+G75*4"
+      },
+      {
+        "id": 72,
+        "text": "Mi jefe ayuda a solucionar los problemas que se presentan en el trabajo",
+        "polarity": "inverse",
+        "formula": "+C76*0+D76*1+E76*2+F76*3+G76*4"
+      },
+      {
+        "id": 73,
+        "text": "Siento que puedo confiar en mi jefe",
+        "polarity": "inverse",
+        "formula": "+C77*0+D77*1+E77*2+F77*3+G77*4"
+      },
+      {
+        "id": 74,
+        "text": "Mi jefe me escucha cuando tengo problemas de trabajo",
+        "polarity": "inverse",
+        "formula": "+C78*0+D78*1+E78*2+F78*3+G78*4"
+      },
+      {
+        "id": 75,
+        "text": "Mi jefe me brinda su apoyo cuando lo necesito",
+        "polarity": "inverse",
+        "formula": "+C79*0+D79*1+E79*2+F79*3+G79*4"
+      },
+      {
+        "id": 76,
+        "text": "Me agrada el ambiente de mi grupo de trabajo",
+        "polarity": "inverse",
+        "formula": "+C80*0+D80*1+E80*2+F80*3+G80*4"
+      },
+      {
+        "id": 77,
+        "text": "En mi grupo de trabajo me tratan de forma respetuosa",
+        "polarity": "inverse",
+        "formula": "+C81*0+D81*1+E81*2+F81*3+G81*4"
+      },
+      {
+        "id": 78,
+        "text": "Siento que puedo confiar en mis compañeros de trabajo",
+        "polarity": "inverse",
+        "formula": "+C82*0+D82*1+E82*2+F82*3+G82*4"
+      },
+      {
+        "id": 79,
+        "text": "Me siento a gusto con mis compañeros de trabajo",
+        "polarity": "inverse",
+        "formula": "+C83*0+D83*1+E83*2+F83*3+G83*4"
+      },
+      {
+        "id": 80,
+        "text": "En mi grupo de trabajo algunas personas me maltratan",
+        "polarity": "direct",
+        "formula": "+C84*4+D84*3+E84*2+F84*1+G84*0"
+      },
+      {
+        "id": 81,
+        "text": "Entre compañeros solucionamos los problemas de forma respetuosa",
+        "polarity": "inverse",
+        "formula": "+C85*0+D85*1+E85*2+F85*3+G85*4"
+      },
+      {
+        "id": 82,
+        "text": "Hay integración en mi grupo de trabajo",
+        "polarity": "inverse",
+        "formula": "+C86*0+D86*1+E86*2+F86*3+G86*4"
+      },
+      {
+        "id": 83,
+        "text": "Mi grupo de trabajo es muy unido",
+        "polarity": "inverse",
+        "formula": "+C87*0+D87*1+E87*2+F87*3+G87*4"
+      },
+      {
+        "id": 84,
+        "text": "Las personas en mi trabajo me hacen sentir parte del grupo",
+        "polarity": "inverse",
+        "formula": "+C88*0+D88*1+E88*2+F88*3+G88*4"
+      },
+      {
+        "id": 85,
+        "text": "Cuando tenemos que realizar trabajo de grupo los compañeros colaboran",
+        "polarity": "inverse",
+        "formula": "+C89*0+D89*1+E89*2+F89*3+G89*4"
+      },
+      {
+        "id": 86,
+        "text": "Es fácil poner de cuando al grupo para hacer el trabajo",
+        "polarity": "inverse",
+        "formula": "+C90*0+D90*1+E90*2+F90*3+G90*4"
+      },
+      {
+        "id": 87,
+        "text": "Mis compañeros de trabajo me ayudan cuando tengo dificultades",
+        "polarity": "inverse",
+        "formula": "+C91*0+D91*1+E91*2+F91*3+G91*4"
+      },
+      {
+        "id": 88,
+        "text": "En mi trabajo las personas nos apoyamos unos a otros",
+        "polarity": "inverse",
+        "formula": "+C92*0+D92*1+E92*2+F92*3+G92*4"
+      },
+      {
+        "id": 89,
+        "text": "Algunos compañeros de trabajo me escuchan cuando tengo problemas",
+        "polarity": "inverse",
+        "formula": "+C93*0+D93*1+E93*2+F93*3+G93*4"
+      },
+      {
+        "id": 90,
+        "text": "Me informan sobre lo que hago bien en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C94*0+D94*1+E94*2+F94*3+G94*4"
+      },
+      {
+        "id": 91,
+        "text": "Me informan sobre lo que debo mejorar en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C95*0+D95*1+E95*2+F95*3+G95*4"
+      },
+      {
+        "id": 92,
+        "text": "La información que recibo sobre mi rendimiento en el trabajo es clara",
+        "polarity": "inverse",
+        "formula": "+C96*0+D96*1+E96*2+F96*3+G96*4"
+      },
+      {
+        "id": 93,
+        "text": "La forma como evalúan mi trabajo en la empresa me ayuda a mejorar",
+        "polarity": "inverse",
+        "formula": "+C97*0+D97*1+E97*2+F97*3+G97*4"
+      },
+      {
+        "id": 94,
+        "text": "Me informan a tiempo sobre lo que debo mejorar en el trabajo",
+        "polarity": "inverse",
+        "formula": "+C98*0+D98*1+E98*2+F98*3+G98*4"
+      },
+      {
+        "id": 95,
+        "text": "En la empresa confían en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C99*0+D99*1+E99*2+F99*3+G99*4"
+      },
+      {
+        "id": 96,
+        "text": "En la empresa me pagan a tiempo mi salario",
+        "polarity": "inverse",
+        "formula": "+C100*0+D100*1+E100*2+F100*3+G100*4"
+      },
+      {
+        "id": 97,
+        "text": "El pago que recibo es el que me ofrecio la empresa",
+        "polarity": "inverse",
+        "formula": "+C101*0+D101*1+E101*2+F101*3+G101*4"
+      },
+      {
+        "id": 98,
+        "text": "El pago que recibo es el que merezco por el trabajo que realizo",
+        "polarity": "inverse",
+        "formula": "+C102*0+D102*1+E102*2+F102*3+G102*4"
+      },
+      {
+        "id": 99,
+        "text": "En mi trabajo tengo posibilidades de progresar",
+        "polarity": "inverse",
+        "formula": "+C103*0+D103*1+E103*2+F103*3+G103*4"
+      },
+      {
+        "id": 100,
+        "text": "Las personas que hacen bien el trabajo pueden progresar en la empresa",
+        "polarity": "inverse",
+        "formula": "+C104*0+D104*1+E104*2+F104*3+G104*4"
+      },
+      {
+        "id": 101,
+        "text": "La empresa  se preocupa por el bienestar de los trabajadores",
+        "polarity": "inverse",
+        "formula": "+C105*0+D105*1+E105*2+F105*3+G105*4"
+      },
+      {
+        "id": 102,
+        "text": "Mi trabajo en la empresa es estable",
+        "polarity": "inverse",
+        "formula": "+C106*0+D106*1+E106*2+F106*3+G106*4"
+      },
+      {
+        "id": 103,
+        "text": "El trabajo que hago me hace sentir bien",
+        "polarity": "inverse",
+        "formula": "+C107*0+D107*1+E107*2+F107*3+G107*4"
+      },
+      {
+        "id": 104,
+        "text": "Siento orgullo de trabajar en esta empresa",
+        "polarity": "inverse",
+        "formula": "+C108*0+D108*1+E108*2+F108*3+G108*4"
+      },
+      {
+        "id": 105,
+        "text": "Hablo bien de la empresa con otras personas",
+        "polarity": "inverse",
+        "formula": "+C109*0+D109*1+E109*2+F109*3+G109*4"
+      },
+      {
+        "id": 106,
+        "text": "Atiendo clientes o usuarios muy enojados",
+        "polarity": "direct",
+        "formula": "+C110*4+D110*3+E110*2+F110*1+G110*0"
+      },
+      {
+        "id": 107,
+        "text": "Atiendo  clientes o usuarios muy preocupados",
+        "polarity": "direct",
+        "formula": "+C111*4+D111*3+E111*2+F111*1+G111*0"
+      },
+      {
+        "id": 108,
+        "text": "Mi trabajo me exige atender personas muy tristes",
+        "polarity": "direct",
+        "formula": "+C112*4+D112*3+E112*2+F112*1+G112*0"
+      },
+      {
+        "id": 109,
+        "text": "Mi trabajo me exige atender personas muy enfermas",
+        "polarity": "direct",
+        "formula": "+C113*4+D113*3+E113*2+F113*1+G113*0"
+      },
+      {
+        "id": 110,
+        "text": "Mi trabajo me exige atender personas muy necesitadas de ayuda",
+        "polarity": "direct",
+        "formula": "+C114*4+D114*3+E114*2+F114*1+G114*0"
+      },
+      {
+        "id": 111,
+        "text": "Atiendo  clientes o usuarios que me maltratan",
+        "polarity": "direct",
+        "formula": "+C115*4+D115*3+E115*2+F115*1+G115*0"
+      },
+      {
+        "id": 112,
+        "text": "Para hacer mi trabajo debo demostrar sentimientos distintos a los míos",
+        "polarity": "direct",
+        "formula": "+C116*4+D116*3+E116*2+F116*1+G116*0"
+      },
+      {
+        "id": 113,
+        "text": "Mi trabajo me exige atender situaciones de violencia",
+        "polarity": "direct",
+        "formula": "+C117*4+D117*3+E117*2+F117*1+G117*0"
+      },
+      {
+        "id": 114,
+        "text": "Mi trabajo me exige atender situaciones muy tristes o dolorosas",
+        "polarity": "direct",
+        "formula": "+C118*4+D118*3+E118*2+F118*1+G118*0"
+      },
+      {
+        "id": 115,
+        "text": "Tengo colaboradores que comunican tarde los asuntos de trabajo",
+        "polarity": "direct",
+        "formula": "+C119*4+D119*3+E119*2+F119*1+G119*0"
+      },
+      {
+        "id": 116,
+        "text": "Tengo colaboradores que tienen comportamientos irrespetuosos",
+        "polarity": "direct",
+        "formula": "+C120*4+D120*3+E120*2+F120*1+G120*0"
+      },
+      {
+        "id": 117,
+        "text": "Tengo colaboradores que dificultan la organización del trabajo",
+        "polarity": "direct",
+        "formula": "+C121*4+D121*3+E121*2+F121*1+G121*0"
+      },
+      {
+        "id": 118,
+        "text": "Tengo colaboradores que guardan silencio cuando les piden opiniones",
+        "polarity": "direct",
+        "formula": "+C122*4+D122*3+E122*2+F122*1+G122*0"
+      },
+      {
+        "id": 119,
+        "text": "Tengo colaboradores que dificultan el logro de los resultados del trabajo",
+        "polarity": "direct",
+        "formula": "+C123*4+D123*3+E123*2+F123*1+G123*0"
+      },
+      {
+        "id": 120,
+        "text": "Tengo colaboradores que expresan de forma irrespetuosa sus desacuerdos",
+        "polarity": "direct",
+        "formula": "+C124*4+D124*3+E124*2+F124*1+G124*0"
+      },
+      {
+        "id": 121,
+        "text": "Tengo colaboradores que cooperan poco cuando se necesita",
+        "polarity": "direct",
+        "formula": "+C125*4+D125*3+E125*2+F125*1+G125*0"
+      },
+      {
+        "id": 122,
+        "text": "Tengo colaboradores que me preocupan por su desempeño",
+        "polarity": "direct",
+        "formula": "+C126*4+D126*3+E126*2+F126*1+G126*0"
+      },
+      {
+        "id": 123,
+        "text": "Tengo colaboradores que ignoran las sugerencias para mejorar su trabajo",
+        "polarity": "direct",
+        "formula": "+C127*4+D127*3+E127*2+F127*1+G127*0"
+      }
+    ],
+    "questionsExtra": [
+      {
+        "id": 1,
+        "text": "Es fácil transportarme entre mi casa y el trabajo",
+        "polarity": "inverse",
+        "formula": "+C129*0+D129*1+E129*2+F129*3+G129*4"
+      },
+      {
+        "id": 2,
+        "text": "Tengo que tomar varios medios de transporte para llegar a mi lugar de trabajo",
+        "polarity": "direct",
+        "formula": "+C130*4+D130*3+E130*2+F130*1+G130*0"
+      },
+      {
+        "id": 3,
+        "text": "Paso mucho tiempo viajando de ida y regreso al trabajo",
+        "polarity": "direct",
+        "formula": "+C131*4+D131*3+E131*2+F131*1+G131*0"
+      },
+      {
+        "id": 4,
+        "text": "Me trasporto cómodamente entre mi casa y el trabajo",
+        "polarity": "inverse",
+        "formula": "+C132*0+D132*1+E132*2+F132*3+G132*4"
+      },
+      {
+        "id": 5,
+        "text": "La zona donde vivo es segura",
+        "polarity": "inverse",
+        "formula": "+C133*0+D133*1+E133*2+F133*3+G133*4"
+      },
+      {
+        "id": 6,
+        "text": "En la zona donde vivo se presentan hurtos y mucha delincuencia",
+        "polarity": "direct",
+        "formula": "+C134*4+D134*3+E134*2+F134*1+G134*0"
+      },
+      {
+        "id": 7,
+        "text": "Desde donde vivo me es fácil llegar al centro médico donde me atienden",
+        "polarity": "inverse",
+        "formula": "+C135*0+D135*1+E135*2+F135*3+G135*4"
+      },
+      {
+        "id": 8,
+        "text": "Cerca a mi vivienda las vías estan en buenas condiciones",
+        "polarity": "inverse",
+        "formula": "+C136*0+D136*1+E136*2+F136*3+G136*4"
+      },
+      {
+        "id": 9,
+        "text": "Cerca a mi vivienda encuentro fácilmente transporte",
+        "polarity": "inverse",
+        "formula": "+C137*0+D137*1+E137*2+F137*3+G137*4"
+      },
+      {
+        "id": 10,
+        "text": "Las condiciones de mi vivienda son buenas",
+        "polarity": "inverse",
+        "formula": "+C138*0+D138*1+E138*2+F138*3+G138*4"
+      },
+      {
+        "id": 11,
+        "text": "En mi vivienda hay servicios de agua y luz",
+        "polarity": "inverse",
+        "formula": "+C139*0+D139*1+E139*2+F139*3+G139*4"
+      },
+      {
+        "id": 12,
+        "text": "Las condiciones de mi vivienda me permiten descanzar cuando lo requiero",
+        "polarity": "inverse",
+        "formula": "+C140*0+D140*1+E140*2+F140*3+G140*4"
+      },
+      {
+        "id": 13,
+        "text": "Las condiciones de mi vivienda me permiten sentirme cómodo",
+        "polarity": "inverse",
+        "formula": "+C141*0+D141*1+E141*2+F141*3+G141*4"
+      },
+      {
+        "id": 14,
+        "text": "Me queda tiempo para actividades de recreación",
+        "polarity": "inverse",
+        "formula": "+C142*0+D142*1+E142*2+F142*3+G142*4"
+      },
+      {
+        "id": 15,
+        "text": "Fuera del trabajo tengo tiempo suficiente para descanzar",
+        "polarity": "inverse",
+        "formula": "+C143*0+D143*1+E143*2+F143*3+G143*4"
+      },
+      {
+        "id": 16,
+        "text": "Tengo tiempo para atender mis asuntos personales y del hogar",
+        "polarity": "inverse",
+        "formula": "+C144*0+D144*1+E144*2+F144*3+G144*4"
+      },
+      {
+        "id": 17,
+        "text": "Tengo tiempo para compartir con mi familia o amigos",
+        "polarity": "inverse",
+        "formula": "+C145*0+D145*1+E145*2+F145*3+G145*4"
+      },
+      {
+        "id": 18,
+        "text": "Tengo buena comunicación con las personas cercanas",
+        "polarity": "inverse",
+        "formula": "+C146*0+D146*1+E146*2+F146*3+G146*4"
+      },
+      {
+        "id": 19,
+        "text": "Las relaciones con mis amigos son buenas",
+        "polarity": "inverse",
+        "formula": "+C147*0+D147*1+E147*2+F147*3+G147*4"
+      },
+      {
+        "id": 20,
+        "text": "Converso con personas cercanas sobre diferentes temas",
+        "polarity": "inverse",
+        "formula": "+C148*0+D148*1+E148*2+F148*3+G148*4"
+      },
+      {
+        "id": 21,
+        "text": "Mis amigos están dispuestos a escucharme cuando tengo problemas",
+        "polarity": "inverse",
+        "formula": "+C149*0+D149*1+E149*2+F149*3+G149*4"
+      },
+      {
+        "id": 22,
+        "text": "Cuento con el apoyo de mi familia cuando tengo problemas",
+        "polarity": "inverse",
+        "formula": "+C150*0+D150*1+E150*2+F150*3+G150*4"
+      },
+      {
+        "id": 23,
+        "text": "Puedo hablar con personas cercanas sobre las cosas que me pasan",
+        "polarity": "inverse",
+        "formula": "+C151*0+D151*1+E151*2+F151*3+G151*4"
+      },
+      {
+        "id": 24,
+        "text": "Mis problemas personales o familiares afectan mi trabajo",
+        "polarity": "direct",
+        "formula": "+C152*4+D152*3+E152*2+F152*1+G152*0"
+      },
+      {
+        "id": 25,
+        "text": "La relación con mi familia cercana es cordial",
+        "polarity": "inverse",
+        "formula": "+C153*0+D153*1+E153*2+F153*3+G153*4"
+      },
+      {
+        "id": 26,
+        "text": "Mis problemas personales o familiares me quitan la energía que necesito para trabajar",
+        "polarity": "direct",
+        "formula": "+C154*4+D154*3+E154*2+F154*1+G154*0"
+      },
+      {
+        "id": 27,
+        "text": "Los problemas con mis familiares los resuelvo de manera amistosa",
+        "polarity": "inverse",
+        "formula": "+C155*0+D155*1+E155*2+F155*3+G155*4"
+      },
+      {
+        "id": 28,
+        "text": "Mis problemas personales o familiares afectan mis relaciones en el trabajo",
+        "polarity": "direct",
+        "formula": "+C156*4+D156*3+E156*2+F156*1+G156*0"
+      },
+      {
+        "id": 29,
+        "text": "El dinero que ganamos en el hogar alcanzan para cubrir los gastos básicos",
+        "polarity": "inverse",
+        "formula": "+C157*0+D157*1+E157*2+F157*3+G157*4"
+      },
+      {
+        "id": 30,
+        "text": "Tengo otros compromisos económicos que afectan mucho el presupuesto familiar",
+        "polarity": "direct",
+        "formula": "+C158*4+D158*3+E158*2+F158*1+G158*0"
+      },
+      {
+        "id": 31,
+        "text": "En mi hogar tenemos deudas difíciles de pagar",
+        "polarity": "direct",
+        "formula": "+C159*4+D159*3+E159*2+F159*1+G159*0"
+      }
+    ],
+    "questionsStress": [
+      {
+        "id": 1,
+        "text": "Dolores en el cuello y espalda o tensión muscular",
+        "formula": "+C161*9+D161*6+E161*3+G161*0"
+      },
+      {
+        "id": 2,
+        "text": "Problemas gastrointestinales, úlcera péptica, acidez, problemas digestivos o del colon",
+        "formula": "+C162*9+D162*6+E162*3+G162*0"
+      },
+      {
+        "id": 3,
+        "text": "Problemas respiratorios",
+        "formula": "+C163*9+D163*6+E163*3+G163*0"
+      },
+      {
+        "id": 4,
+        "text": "Dolor de cabeza",
+        "formula": "+C164*6+D164*4+E164*2+G164*0"
+      },
+      {
+        "id": 5,
+        "text": "Trastornos del sueño como somnolencia durante el día o desvelo en la noche",
+        "formula": "+C165*6+D165*4+E165*2+G165*0"
+      },
+      {
+        "id": 6,
+        "text": "Palpitaciones en el pecho o problemas cardíacos",
+        "formula": "+C166*6+D166*4+E166*2+G166*0"
+      },
+      {
+        "id": 7,
+        "text": "Cambios fuertes al apetito",
+        "formula": "+C167*3+D167*2+E167*1+G167*0"
+      },
+      {
+        "id": 8,
+        "text": "Problemas relacionados con la función de los órganos genitales (Impotencia, frigidez)",
+        "formula": "+C168*3+D168*2+E168*1+G168*0"
+      },
+      {
+        "id": 9,
+        "text": "Dificultad en las relaciones familiares",
+        "formula": "+C169*9+D169*6+E169*3+G169*0"
+      },
+      {
+        "id": 10,
+        "text": "Dificultad para permanecer quieto o dificultad para iniciar actividades",
+        "formula": "+C170*6+D170*4+E170*2+G170*0"
+      },
+      {
+        "id": 11,
+        "text": "Dificultad en las relaciones con otras personas",
+        "formula": "+C171*6+D171*4+E171*2+G171*0"
+      },
+      {
+        "id": 12,
+        "text": "Sensación de aislamiento y desisnterés",
+        "formula": "+C172*3+D172*2+E172*1+G172*0"
+      },
+      {
+        "id": 13,
+        "text": "Sentimiento de sobrecarga de trabajo",
+        "formula": "+C173*9+D173*6+E173*3+G173*0"
+      },
+      {
+        "id": 14,
+        "text": "Dificultad para concentrarse, olvidos frecuentes",
+        "formula": "+C174*9+D174*6+E174*3+G174*0"
+      },
+      {
+        "id": 15,
+        "text": "Aumento en el número de accidentes de trabajo",
+        "formula": "+C175*9+D175*6+E175*3+G175*0"
+      },
+      {
+        "id": 16,
+        "text": "Sentimiento de frustración, de no haber hecho lo que se quería en la vida",
+        "formula": "+C176*6+D176*4+E176*2+G176*0"
+      },
+      {
+        "id": 17,
+        "text": "Cansancio, tedio o desgano",
+        "formula": "+C177*6+D177*4+E177*2+G177*0"
+      },
+      {
+        "id": 18,
+        "text": "Disminución del rendimiento en el trabajo o poca creatividad",
+        "formula": "+C178*6+D178*4+E178*2+G178*0"
+      },
+      {
+        "id": 19,
+        "text": "Deseo de no asistir al trabajo",
+        "formula": "+C179*6+D179*4+E179*2+G179*0"
+      },
+      {
+        "id": 20,
+        "text": "Bajo compromiso o poco interés con lo que se hace",
+        "formula": "+C180*3+D180*2+E180*1+G180*0"
+      },
+      {
+        "id": 21,
+        "text": "Dificultad para tomar decisiones",
+        "formula": "+C181*3+D181*2+E181*1+G181*0"
+      },
+      {
+        "id": 22,
+        "text": "Deseo de cambiar de empleo",
+        "formula": "+C182*3+D182*2+E182*1+G182*0"
+      },
+      {
+        "id": 23,
+        "text": "Sentimiento de soledad y miedo",
+        "formula": "+C183*9+D183*6+E183*3+G183*0"
+      },
+      {
+        "id": 24,
+        "text": "Sentimiento de irritabilidad, actitudes y pensamientos negativos",
+        "formula": "+C184*9+D184*6+E184*3+G184*0"
+      },
+      {
+        "id": 25,
+        "text": "Sentimiento de angustia, preocupación o tristeza",
+        "formula": "+C185*6+D185*4+E185*2+G185*0"
+      },
+      {
+        "id": 26,
+        "text": "Consumo de drogas para aliviar la tensión o los nervios",
+        "formula": "+C186*6+D186*4+E186*2+G186*0"
+      },
+      {
+        "id": 27,
+        "text": "Sentimiento de que \"no vale nada\", o \"no sirve para nada\"",
+        "formula": "+C187*6+D187*4+E187*2+G187*0"
+      },
+      {
+        "id": 28,
+        "text": "Consumo de bebidas alcohólicas o café o cigarrillo",
+        "formula": "+C188*6+D188*4+E188*2+G188*0"
+      },
+      {
+        "id": 29,
+        "text": "Sentimiento de que está perdiendo la razón",
+        "formula": "+C189*3+D189*2+E189*1+G189*0"
+      },
+      {
+        "id": 30,
+        "text": "Comportamientos rígidos, obstinación o terquedad",
+        "formula": "+C190*3+D190*2+E190*1+G190*0"
+      },
+      {
+        "id": 31,
+        "text": "Sensación de no poder manejar los problemas de la vida",
+        "formula": "+C191*3+D191*2+E191*1+G191*0"
+      }
+    ]
+  },
+  "catalogB": {
+    "questionsIntra": [
+      {
+        "id": 1,
+        "text": "El ruido en el lugar donde trabajo es molesto",
+        "polarity": "direct",
+        "formula": "+C5*4+D5*3+E5*2+F5*1+G5*0"
+      },
+      {
+        "id": 2,
+        "text": "En el lugar donde trabajo hace mucho frío",
+        "polarity": "direct",
+        "formula": "+C6*4+D6*3+E6*2+F6*1+G6*0"
+      },
+      {
+        "id": 3,
+        "text": "En el lugar donde trabajo hace mucho calor",
+        "polarity": "direct",
+        "formula": "+C7*4+D7*3+E7*2+F7*1+G7*0"
+      },
+      {
+        "id": 4,
+        "text": "El aire en el lugar donde trabajo es fresco y agradable",
+        "polarity": "inverse",
+        "formula": "+C8*0+D8*1+E8*2+F8*3+G8*4"
+      },
+      {
+        "id": 5,
+        "text": "La luz del sitio donde trabajo es agradable",
+        "polarity": "inverse",
+        "formula": "+C9*0+D9*1+E9*2+F9*3+G9*4"
+      },
+      {
+        "id": 6,
+        "text": "El espacio donde trabajo es cómodo",
+        "polarity": "inverse",
+        "formula": "+C10*0+D10*1+E10*2+F10*3+G10*4"
+      },
+      {
+        "id": 7,
+        "text": "En mi trabajo me preocupa estar expuesto a sustancias químicas que afecten mi salud",
+        "polarity": "direct",
+        "formula": "+C11*4+D11*3+E11*2+F11*1+G11*0"
+      },
+      {
+        "id": 8,
+        "text": "Mi trabajo me exige hacer mucho esfuerzo físico",
+        "polarity": "direct",
+        "formula": "+C12*4+D12*3+E12*2+F12*1+G12*0"
+      },
+      {
+        "id": 9,
+        "text": "Los equipos o herramientas con los que trabajo son cómodos",
+        "polarity": "inverse",
+        "formula": "+C13*0+D13*1+E13*2+F13*3+G13*4"
+      },
+      {
+        "id": 10,
+        "text": "En mi trabajo me preocupa estar expuesto a microbios, animales o plantas que afecten mi salud",
+        "polarity": "direct",
+        "formula": "+C14*4+D14*3+E14*2+F14*1+G14*0"
+      },
+      {
+        "id": 11,
+        "text": "Me preocupa accidentarme en mi trabajo",
+        "polarity": "direct",
+        "formula": "+C15*4+D15*3+E15*2+F15*1+G15*0"
+      },
+      {
+        "id": 12,
+        "text": "El lugar donde trabajo es limpio y ordenado",
+        "polarity": "inverse",
+        "formula": "+C16*0+D16*1+E16*2+F16*3+G16*4"
+      },
+      {
+        "id": 13,
+        "text": "Por la cantidad de trabajo que tengo debo quedarme tiempo adicional",
+        "polarity": "direct",
+        "formula": "+C17*4+D17*3+E17*2+F17*1+G17*0"
+      },
+      {
+        "id": 14,
+        "text": "Me alcanza el tiempo de trabajo para tener al día mis deberes",
+        "polarity": "inverse",
+        "formula": "+C18*0+D18*1+E18*2+F18*3+G18*4"
+      },
+      {
+        "id": 15,
+        "text": "Por la cantidad de trabajo que tengo debo trabajar sin parar",
+        "polarity": "direct",
+        "formula": "+C19*4+D19*3+E19*2+F19*1+G19*0"
+      },
+      {
+        "id": 16,
+        "text": "Mi trabajo me exige hacer mucho esfuerzo mental",
+        "polarity": "direct",
+        "formula": "+C20*4+D20*3+E20*2+F20*1+G20*0"
+      },
+      {
+        "id": 17,
+        "text": "Mi trabajo me exige estar muy concentrado",
+        "polarity": "direct",
+        "formula": "+C21*4+D21*3+E21*2+F21*1+G21*0"
+      },
+      {
+        "id": 18,
+        "text": "Mi trabajo me exige memorizar mucha información",
+        "polarity": "direct",
+        "formula": "+C22*4+D22*3+E22*2+F22*1+G22*0"
+      },
+      {
+        "id": 19,
+        "text": "En mi trabajo tengo que hace cálculos matemáticos",
+        "polarity": "direct",
+        "formula": "+C23*4+D23*3+E23*2+F23*1+G23*0"
+      },
+      {
+        "id": 20,
+        "text": "Mi trabajo requiere que me fije en pequeños detalles",
+        "polarity": "direct",
+        "formula": "+C24*4+D24*3+E24*2+F24*1+G24*0"
+      },
+      {
+        "id": 21,
+        "text": "Trabajo en horario de noche",
+        "polarity": "direct",
+        "formula": "+C25*4+D25*3+E25*2+F25*1+G25*0"
+      },
+      {
+        "id": 22,
+        "text": "En mi trabajo es posible tomar pausas para descansar",
+        "polarity": "inverse",
+        "formula": "+C26*0+D26*1+E26*2+F26*3+G26*4"
+      },
+      {
+        "id": 23,
+        "text": "Mi trabajo me exige laborar en días de descanso, festivos o fines de semana",
+        "polarity": "direct",
+        "formula": "+C27*4+D27*3+E27*2+F27*1+G27*0"
+      },
+      {
+        "id": 24,
+        "text": "En mi trabajo puedo tomar fines de semana o dias de descanso al mes",
+        "polarity": "inverse",
+        "formula": "+C28*0+D28*1+E28*2+F28*3+G28*4"
+      },
+      {
+        "id": 25,
+        "text": "Cuando estoy en casa sigo pensando en el trabajo",
+        "polarity": "direct",
+        "formula": "+C29*4+D29*3+E29*2+F29*1+G29*0"
+      },
+      {
+        "id": 26,
+        "text": "Discuto con mi familiao amigos por causa de mi trabajo",
+        "polarity": "direct",
+        "formula": "+C30*4+D30*3+E30*2+F30*1+G30*0"
+      },
+      {
+        "id": 27,
+        "text": "Debo atender asuntos de trabajo cuando estoy en casa",
+        "polarity": "direct",
+        "formula": "+C31*4+D31*3+E31*2+F31*1+G31*0"
+      },
+      {
+        "id": 28,
+        "text": "Por mi trabajo el tiempo que paso con mi familia y amigos es muy poco.",
+        "polarity": "direct",
+        "formula": "+C32*4+D32*3+E32*2+F32*1+G32*0"
+      },
+      {
+        "id": 29,
+        "text": "Mi trabajo me permite aprender nuevas cosas",
+        "polarity": "inverse",
+        "formula": "+C33*0+D33*1+E33*2+F33*3+G33*4"
+      },
+      {
+        "id": 30,
+        "text": "Mi trabajo me permite desarrollar mis habilidades",
+        "polarity": "inverse",
+        "formula": "+C34*0+D34*1+E34*2+F34*3+G34*4"
+      },
+      {
+        "id": 31,
+        "text": "Mi trabajo me permite aplicar mis conocimientos",
+        "polarity": "inverse",
+        "formula": "+C35*0+D35*1+E35*2+F35*3+G35*4"
+      },
+      {
+        "id": 32,
+        "text": "Mi trabajo me permite aprender cosas nuevas",
+        "polarity": "inverse",
+        "formula": "+C36*0+D36*1+E36*2+F36*3+G36*4"
+      },
+      {
+        "id": 33,
+        "text": "Puedo tomar pausas cuando las necesito",
+        "polarity": "inverse",
+        "formula": "+C37*0+D37*1+E37*2+F37*3+G37*4"
+      },
+      {
+        "id": 34,
+        "text": "Puedo decidir cuánto trabajo hago en el día",
+        "polarity": "inverse",
+        "formula": "+C38*0+D38*1+E38*2+F38*3+G38*4"
+      },
+      {
+        "id": 35,
+        "text": "Puedo decidir la velocidad  a la que trabajo",
+        "polarity": "inverse",
+        "formula": "+C39*0+D39*1+E39*2+F39*3+G39*4"
+      },
+      {
+        "id": 36,
+        "text": "Puedo cambiar el orden de las actividades en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C40*0+D40*1+E40*2+F40*3+G40*4"
+      },
+      {
+        "id": 37,
+        "text": "Puedo parar un momento mi trabajo para atender algún asunto personal",
+        "polarity": "inverse",
+        "formula": "+C41*0+D41*1+E41*2+F41*3+G41*4"
+      },
+      {
+        "id": 38,
+        "text": "Me explican claramente los cambios que ocurren en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C42*0+D42*1+E42*2+F42*3+G42*4"
+      },
+      {
+        "id": 39,
+        "text": "Puedo dar sugerencias sobre los cambios que ocurren en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C43*0+D43*1+E43*2+F43*3+G43*4"
+      },
+      {
+        "id": 40,
+        "text": "Cuando se presentan cambios en mi trabajo se tienen en cuenta mis ideas y sugerencias",
+        "polarity": "inverse",
+        "formula": "+C44*0+D44*1+E44*2+F44*3+G44*4"
+      },
+      {
+        "id": 41,
+        "text": "Me informan con claridad cuáles son mis funciones.",
+        "polarity": "inverse",
+        "formula": "+C45*0+D45*1+E45*2+F45*3+G45*4"
+      },
+      {
+        "id": 42,
+        "text": "Me informan cuáles son las decisiones que puedo tomar en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C46*0+D46*1+E46*2+F46*3+G46*4"
+      },
+      {
+        "id": 43,
+        "text": "Me explican claramente los resultados que debo lograr en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C47*0+D47*1+E47*2+F47*3+G47*4"
+      },
+      {
+        "id": 44,
+        "text": "Me explican claramente los objetivos de mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C48*0+D48*1+E48*2+F48*3+G48*4"
+      },
+      {
+        "id": 45,
+        "text": "Me informan claramente con quien puedo resolver los asuntos de trabajo",
+        "polarity": "inverse",
+        "formula": "+C49*0+D49*1+E49*2+F49*3+G49*4"
+      },
+      {
+        "id": 46,
+        "text": "La empresa me permite asistir a capacitaciones relacionadas con mi trabajo.",
+        "polarity": "inverse",
+        "formula": "+C50*0+D50*1+E50*2+F50*3+G50*4"
+      },
+      {
+        "id": 47,
+        "text": "Reciibo capacitación ütil para hacer mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C51*0+D51*1+E51*2+F51*3+G51*4"
+      },
+      {
+        "id": 48,
+        "text": "Recibo capacitación que me ayuda a hacer mejor hacer mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C52*0+D52*1+E52*2+F52*3+G52*4"
+      },
+      {
+        "id": 49,
+        "text": "Mi jefe ayuda a organizar mejor el trabajo",
+        "polarity": "inverse",
+        "formula": "+C53*0+D53*1+E53*2+F53*3+G53*4"
+      },
+      {
+        "id": 50,
+        "text": "Mi jefe tiene en cuenta mis puntos de vista y opiniones",
+        "polarity": "inverse",
+        "formula": "+C54*0+D54*1+E54*2+F54*3+G54*4"
+      },
+      {
+        "id": 51,
+        "text": "Mi jefe me anima para hacer mejor mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C55*0+D55*1+E55*2+F55*3+G55*4"
+      },
+      {
+        "id": 52,
+        "text": "Mi jefe distribuye las tareas de forma que me facilita el trabajo",
+        "polarity": "inverse",
+        "formula": "+C56*0+D56*1+E56*2+F56*3+G56*4"
+      },
+      {
+        "id": 53,
+        "text": "Mi jefe me comunica a tiempo la información relacionada con el trabajo",
+        "polarity": "inverse",
+        "formula": "+C57*0+D57*1+E57*2+F57*3+G57*4"
+      },
+      {
+        "id": 54,
+        "text": "La orientación que me da mi jefe me ayuda a hacer mejor mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C58*0+D58*1+E58*2+F58*3+G58*4"
+      },
+      {
+        "id": 55,
+        "text": "Mi jefe me ayuda a progresar en el trabajo",
+        "polarity": "inverse",
+        "formula": "+C59*0+D59*1+E59*2+F59*3+G59*4"
+      },
+      {
+        "id": 56,
+        "text": "Mi jefe me ayuda a sentirme bien en el trabajo",
+        "polarity": "inverse",
+        "formula": "+C60*0+D60*1+E60*2+F60*3+G60*4"
+      },
+      {
+        "id": 57,
+        "text": "Mi jefe ayuda a solucionar los problemas que se presentan en el trabajo",
+        "polarity": "inverse",
+        "formula": "+C61*0+D61*1+E61*2+F61*3+G61*4"
+      },
+      {
+        "id": 58,
+        "text": "Mi jefe me trata con respeto",
+        "polarity": "inverse",
+        "formula": "+C62*0+D62*1+E62*2+F62*3+G62*4"
+      },
+      {
+        "id": 59,
+        "text": "Siento que puedo confiar en mi jefe",
+        "polarity": "inverse",
+        "formula": "+C63*0+D63*1+E63*2+F63*3+G63*4"
+      },
+      {
+        "id": 60,
+        "text": "Mi jefe me escucha cuando tengo problemas de trabajo",
+        "polarity": "inverse",
+        "formula": "+C64*0+D64*1+E64*2+F64*3+G64*4"
+      },
+      {
+        "id": 61,
+        "text": "Mi jefe me brinda su apoyo cuando lo necesito",
+        "polarity": "inverse",
+        "formula": "+C65*0+D65*1+E65*2+F65*3+G65*4"
+      },
+      {
+        "id": 62,
+        "text": "Me agrada el ambiente de mi grupo de trabajo",
+        "polarity": "inverse",
+        "formula": "+C66*0+D66*1+E66*2+F66*3+G66*4"
+      },
+      {
+        "id": 63,
+        "text": "En mi grupo de trabajo me tratan de forma respetuosa",
+        "polarity": "inverse",
+        "formula": "+C67*0+D67*1+E67*2+F67*3+G67*4"
+      },
+      {
+        "id": 64,
+        "text": "Siento que puedo confiar en mis compañeros de trabajo",
+        "polarity": "inverse",
+        "formula": "+C68*0+D68*1+E68*2+F68*3+G68*4"
+      },
+      {
+        "id": 65,
+        "text": "Me siento a gusto con mis compañeros de trabajo",
+        "polarity": "inverse",
+        "formula": "+C69*0+D69*1+E69*2+F69*3+G69*4"
+      },
+      {
+        "id": 66,
+        "text": "En mi grupo de trabajo algunas personas me maltratan",
+        "polarity": "direct",
+        "formula": "+C70*4+D70*3+E70*2+F70*1+G70*0"
+      },
+      {
+        "id": 67,
+        "text": "Entre compañeros solucionamos los problemas de forma respetuosa",
+        "polarity": "inverse",
+        "formula": "+C71*0+D71*1+E71*2+F71*3+G71*4"
+      },
+      {
+        "id": 68,
+        "text": "Mi grupo de trabajo es muy unido",
+        "polarity": "inverse",
+        "formula": "+C72*0+D72*1+E72*2+F72*3+G72*4"
+      },
+      {
+        "id": 69,
+        "text": "Cuando tenemos que realizar trabajo de grupo los compañeros colaboran",
+        "polarity": "inverse",
+        "formula": "+C73*0+D73*1+E73*2+F73*3+G73*4"
+      },
+      {
+        "id": 70,
+        "text": "Es fácil poner de acuerdo al grupo para hacer el trabajo",
+        "polarity": "inverse",
+        "formula": "+C74*0+D74*1+E74*2+F74*3+G74*4"
+      },
+      {
+        "id": 71,
+        "text": "Mis compañeros de trabajo me ayudan cuando tengo dificultades",
+        "polarity": "inverse",
+        "formula": "+C75*0+D75*1+E75*2+F75*3+G75*4"
+      },
+      {
+        "id": 72,
+        "text": "En mi trabajo las personas nos apoyamos unos a otros",
+        "polarity": "inverse",
+        "formula": "+C76*0+D76*1+E76*2+F76*3+G76*4"
+      },
+      {
+        "id": 73,
+        "text": "Algunos compañeros de trabajo me escuchan cuando tengo problemas",
+        "polarity": "inverse",
+        "formula": "+C77*0+D77*1+E77*2+F77*3+G77*4"
+      },
+      {
+        "id": 74,
+        "text": "Me informan sobre lo que hago bien en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C78*0+D78*1+E78*2+F78*3+G78*4"
+      },
+      {
+        "id": 75,
+        "text": "Me informan sobre lo que debo mejorar en mi trabajo",
+        "polarity": "inverse",
+        "formula": "+C79*0+D79*1+E79*2+F79*3+G79*4"
+      },
+      {
+        "id": 76,
+        "text": "La información que recibo sobre mi rendimiento en el trabajo es clara",
+        "polarity": "inverse",
+        "formula": "+C80*0+D80*1+E80*2+F80*3+G80*4"
+      },
+      {
+        "id": 77,
+        "text": "La forma como evalúan mi trabajo en la empresa me ayuda a mejorar",
+        "polarity": "inverse",
+        "formula": "+C81*0+D81*1+E81*2+F81*3+G81*4"
+      },
+      {
+        "id": 78,
+        "text": "Me informan a tiempo sobre lo que debo mejorar en el trabajo",
+        "polarity": "inverse",
+        "formula": "+C82*0+D82*1+E82*2+F82*3+G82*4"
+      },
+      {
+        "id": 79,
+        "text": "En la empresa me pagan a tiempo mi salario",
+        "polarity": "inverse",
+        "formula": "+C83*0+D83*1+E83*2+F83*3+G83*4"
+      },
+      {
+        "id": 80,
+        "text": "El pago que recibo es el que me ofrecio la empresa",
+        "polarity": "inverse",
+        "formula": "+C84*0+D84*1+E84*2+F84*3+G84*4"
+      },
+      {
+        "id": 81,
+        "text": "El pago que recibo es el que merezco por el trabajo que realizo",
+        "polarity": "inverse",
+        "formula": "+C85*0+D85*1+E85*2+F85*3+G85*4"
+      },
+      {
+        "id": 82,
+        "text": "En mi trabajo tengo posibilidades de progresar",
+        "polarity": "inverse",
+        "formula": "+C86*0+D86*1+E86*2+F86*3+G86*4"
+      },
+      {
+        "id": 83,
+        "text": "Las personas que hacen bien el trabajo pueden progresar en la empresa",
+        "polarity": "inverse",
+        "formula": "+C87*0+D87*1+E87*2+F87*3+G87*4"
+      },
+      {
+        "id": 84,
+        "text": "La empresa  se preocupa por el bienestar de los trabajadores",
+        "polarity": "inverse",
+        "formula": "+C88*0+D88*1+E88*2+F88*3+G88*4"
+      },
+      {
+        "id": 85,
+        "text": "Mi trabajo en la empresa es estable",
+        "polarity": "inverse",
+        "formula": "+C89*0+D89*1+E89*2+F89*3+G89*4"
+      },
+      {
+        "id": 86,
+        "text": "El trabajo que hago me hace sentir bien",
+        "polarity": "inverse",
+        "formula": "+C90*0+D90*1+E90*2+F90*3+G90*4"
+      },
+      {
+        "id": 87,
+        "text": "Siento orgullo de trabajar en esta empresa",
+        "polarity": "inverse",
+        "formula": "+C91*0+D91*1+E91*2+F91*3+G91*4"
+      },
+      {
+        "id": 88,
+        "text": "Hablo bien de la empresa con otras personas",
+        "polarity": "inverse",
+        "formula": "+C92*0+D92*1+E92*2+F92*3+G92*4"
+      },
+      {
+        "id": 89,
+        "text": "Atiendo clientes o usuarios muy enojados",
+        "polarity": "direct",
+        "formula": "+C93*4+D93*3+E93*2+F93*1+G93*0"
+      },
+      {
+        "id": 90,
+        "text": "Atiendo  clientes o usuarios muy preocupados",
+        "polarity": "direct",
+        "formula": "+C94*4+D94*3+E94*2+F94*1+G94*0"
+      },
+      {
+        "id": 91,
+        "text": "Mi trabajo me exige atender personas muy tristes",
+        "polarity": "direct",
+        "formula": "+C95*4+D95*3+E95*2+F95*1+G95*0"
+      },
+      {
+        "id": 92,
+        "text": "Mi trabajo me exige atender personas muy enfermas",
+        "polarity": "direct",
+        "formula": "+C96*4+D96*3+E96*2+F96*1+G96*0"
+      },
+      {
+        "id": 93,
+        "text": "Mi trabajo me exige atender personas muy necesitadas de ayuda",
+        "polarity": "direct",
+        "formula": "+C97*4+D97*3+E97*2+F97*1+G97*0"
+      },
+      {
+        "id": 94,
+        "text": "Atiendo clientes o usuarios que me maltratan",
+        "polarity": "direct",
+        "formula": "+C98*4+D98*3+E98*2+F98*1+G98*0"
+      },
+      {
+        "id": 95,
+        "text": "Mi trabajo me exige atender situaciones de violencia",
+        "polarity": "direct",
+        "formula": "+C99*4+D99*3+E99*2+F99*1+G99*0"
+      },
+      {
+        "id": 96,
+        "text": "Mi trabajo me exige atender situaciones muy tristes o dolorosas",
+        "polarity": "direct",
+        "formula": "+C100*4+D100*3+E100*2+F100*1+G100*0"
+      },
+      {
+        "id": 97,
+        "text": "Puedo expresar tristeza o enojo frente a llas persnas que atiendo",
+        "polarity": "inverse",
+        "formula": "+C101*0+D101*1+E101*2+F101*3+G101*4"
+      }
+    ],
+    "questionsExtra": [
+      {
+        "id": 1,
+        "text": "Es fácil transportarme entre mi casa y el trabajo",
+        "polarity": "inverse",
+        "formula": "+C103*0+D103*1+E103*2+F103*3+G103*4"
+      },
+      {
+        "id": 2,
+        "text": "Tengo que tomar varios medios de transporte para llegar a mi lugar de trabajo",
+        "polarity": "direct",
+        "formula": "+C104*4+D104*3+E104*2+F104*1+G104*0"
+      },
+      {
+        "id": 3,
+        "text": "Paso mucho tiempo viajando de ida y regreso al trabajo",
+        "polarity": "direct",
+        "formula": "+C105*4+D105*3+E105*2+F105*1+G105*0"
+      },
+      {
+        "id": 4,
+        "text": "Me trasporto cómodamente entre mi casa y el trabajo",
+        "polarity": "inverse",
+        "formula": "+C106*0+D106*1+E106*2+F106*3+G106*4"
+      },
+      {
+        "id": 5,
+        "text": "La zona donde vivo es segura",
+        "polarity": "inverse",
+        "formula": "+C107*0+D107*1+E107*2+F107*3+G107*4"
+      },
+      {
+        "id": 6,
+        "text": "En la zona donde vivo se presentan hurtos y mucha delincuencia",
+        "polarity": "direct",
+        "formula": "+C108*4+D108*3+E108*2+F108*1+G108*0"
+      },
+      {
+        "id": 7,
+        "text": "Desde donde vivo me es fácil llegar al centro médico donde me atienden",
+        "polarity": "inverse",
+        "formula": "+C109*0+D109*1+E109*2+F109*3+G109*4"
+      },
+      {
+        "id": 8,
+        "text": "Cerca a mi vivienda las vías estan en buenas condiciones",
+        "polarity": "inverse",
+        "formula": "+C110*0+D110*1+E110*2+F110*3+G110*4"
+      },
+      {
+        "id": 9,
+        "text": "Cerca a mi vivienda encuentro fácilmente transporte",
+        "polarity": "inverse",
+        "formula": "+C111*0+D111*1+E111*2+F111*3+G111*4"
+      },
+      {
+        "id": 10,
+        "text": "Las condiciones de mi vivienda son buenas",
+        "polarity": "inverse",
+        "formula": "+C112*0+D112*1+E112*2+F112*3+G112*4"
+      },
+      {
+        "id": 11,
+        "text": "En mi vivienda hay servicios de agua y luz",
+        "polarity": "inverse",
+        "formula": "+C113*0+D113*1+E113*2+F113*3+G113*4"
+      },
+      {
+        "id": 12,
+        "text": "Las condiciones de mi vivienda me permiten descanzar cuando lo requiero",
+        "polarity": "inverse",
+        "formula": "+C114*0+D114*1+E114*2+F114*3+G114*4"
+      },
+      {
+        "id": 13,
+        "text": "Las condiciones de mi vivienda me permiten sentirme cómodo",
+        "polarity": "inverse",
+        "formula": "+C115*0+D115*1+E115*2+F115*3+G115*4"
+      },
+      {
+        "id": 14,
+        "text": "Me queda tiempo para actividades de recreación",
+        "polarity": "inverse",
+        "formula": "+C116*0+D116*1+E116*2+F116*3+G116*4"
+      },
+      {
+        "id": 15,
+        "text": "Fuera del trabajo tengo tiempo suficiente para descanzar",
+        "polarity": "inverse",
+        "formula": "+C117*0+D117*1+E117*2+F117*3+G117*4"
+      },
+      {
+        "id": 16,
+        "text": "Tengo tiempo para atender mis asuntos personales y del hogar",
+        "polarity": "inverse",
+        "formula": "+C118*0+D118*1+E118*2+F118*3+G118*4"
+      },
+      {
+        "id": 17,
+        "text": "Tengo tiempo para compartir con mi familia o amigos",
+        "polarity": "inverse",
+        "formula": "+C119*0+D119*1+E119*2+F119*3+G119*4"
+      },
+      {
+        "id": 18,
+        "text": "Tengo buena comunicación con las personas cercanas",
+        "polarity": "inverse",
+        "formula": "+C120*0+D120*1+E120*2+F120*3+G120*4"
+      },
+      {
+        "id": 19,
+        "text": "Las relaciones con mis amigos son buenas",
+        "polarity": "inverse",
+        "formula": "+C121*0+D121*1+E121*2+F121*3+G121*4"
+      },
+      {
+        "id": 20,
+        "text": "Converso con personas cercanas sobre diferentes temas",
+        "polarity": "inverse",
+        "formula": "+C122*0+D122*1+E122*2+F122*3+G122*4"
+      },
+      {
+        "id": 21,
+        "text": "Mis amigos están dispuestos a escucharme cuando tengo problemas",
+        "polarity": "inverse",
+        "formula": "+C123*0+D123*1+E123*2+F123*3+G123*4"
+      },
+      {
+        "id": 22,
+        "text": "Cuento con el apoyo de mi familia cuando tengo problemas",
+        "polarity": "inverse",
+        "formula": "+C124*0+D124*1+E124*2+F124*3+G124*4"
+      },
+      {
+        "id": 23,
+        "text": "Puedo hablar con personas cercanas sobre las cosas que me pasan",
+        "polarity": "inverse",
+        "formula": "+C125*0+D125*1+E125*2+F125*3+G125*4"
+      },
+      {
+        "id": 24,
+        "text": "Mis problemas personales o familiares afectan mi trabajo",
+        "polarity": "direct",
+        "formula": "+C126*4+D126*3+E126*2+F126*1+G126*0"
+      },
+      {
+        "id": 25,
+        "text": "La relación con mi familia cercana es cordial",
+        "polarity": "inverse",
+        "formula": "+C127*0+D127*1+E127*2+F127*3+G127*4"
+      },
+      {
+        "id": 26,
+        "text": "Mis problemas personales o familiares me quitan la energía que necesito para trabajar",
+        "polarity": "direct",
+        "formula": "+C128*4+D128*3+E128*2+F128*1+G128*0"
+      },
+      {
+        "id": 27,
+        "text": "Los problemas con mis familiares los resuelvo de manera amistosa",
+        "polarity": "inverse",
+        "formula": "+C129*0+D129*1+E129*2+F129*3+G129*4"
+      },
+      {
+        "id": 28,
+        "text": "Mis problemas personales o familiares afectan mis relaciones en el trabajo",
+        "polarity": "direct",
+        "formula": "+C130*4+D130*3+E130*2+F130*1+G130*0"
+      },
+      {
+        "id": 29,
+        "text": "El dinero que ganamos en el hogar alcanzan para cubrir los gastos básicos",
+        "polarity": "inverse",
+        "formula": "+C131*0+D131*1+E131*2+F131*3+G131*4"
+      },
+      {
+        "id": 30,
+        "text": "Tengo otros compromisos económicos que afectan mucho el presupuesto familiar",
+        "polarity": "direct",
+        "formula": "+C132*4+D132*3+E132*2+F132*1+G132*0"
+      },
+      {
+        "id": 31,
+        "text": "En mi hogar tenemos deudas difíciles de pagar",
+        "polarity": "direct",
+        "formula": "+C133*4+D133*3+E133*2+F133*1+G133*0"
+      }
+    ],
+    "questionsStress": [
+      {
+        "id": 1,
+        "text": "Dolores en el cuello y espalda o tensión muscular",
+        "formula": "+C135*9+D135*6+E135*3+G135*0"
+      },
+      {
+        "id": 2,
+        "text": "Problemas gastrointestinales, úlcera péptica, acidez, problemas digestivos o del colon",
+        "formula": "+C136*9+D136*6+E136*3+G136*0"
+      },
+      {
+        "id": 3,
+        "text": "Problemas respiratorios",
+        "formula": "+C137*9+D137*6+E137*3+G137*0"
+      },
+      {
+        "id": 4,
+        "text": "Dolor de cabeza",
+        "formula": "+C138*6+D138*4+E138*2+G138*0"
+      },
+      {
+        "id": 5,
+        "text": "Trastornos del sueño como somnolencia durante el día o desvelo en la noche",
+        "formula": "+C139*6+D139*4+E139*2+G139*0"
+      },
+      {
+        "id": 6,
+        "text": "Palpitaciones en el pecho o problemas cardíacos",
+        "formula": "+C140*6+D140*4+E140*2+G140*0"
+      },
+      {
+        "id": 7,
+        "text": "Cambios fuertes al apetito",
+        "formula": "+C141*3+D141*2+E141*1+G141*0"
+      },
+      {
+        "id": 8,
+        "text": "Problemas relacionados con la función de los órganos genitales (Impotencia, frigidez)",
+        "formula": "+C142*3+D142*2+E142*1+G142*0"
+      },
+      {
+        "id": 9,
+        "text": "Dificultad en las relaciones familiares",
+        "formula": "+C143*9+D143*6+E143*3+G143*0"
+      },
+      {
+        "id": 10,
+        "text": "Dificultad para permanecer quieto o dificultad para iniciar actividades",
+        "formula": "+C144*6+D144*4+E144*2+G144*0"
+      },
+      {
+        "id": 11,
+        "text": "Dificultad en las relaciones con otras personas",
+        "formula": "+C145*6+D145*4+E145*2+G145*0"
+      },
+      {
+        "id": 12,
+        "text": "Sensación de aislamiento y desisnterés",
+        "formula": "+C146*3+D146*2+E146*1+G146*0"
+      },
+      {
+        "id": 13,
+        "text": "Sentimiento de sobrecarga de trabajo",
+        "formula": "+C147*9+D147*6+E147*3+G147*0"
+      },
+      {
+        "id": 14,
+        "text": "Dificultad para concentrarse, olvidos frecuentes",
+        "formula": "+C148*9+D148*6+E148*3+G148*0"
+      },
+      {
+        "id": 15,
+        "text": "Aumento en el número de accidentes de trabajo",
+        "formula": "+C149*9+D149*6+E149*3+G149*0"
+      },
+      {
+        "id": 16,
+        "text": "Sentimiento de frustración, de no haber hecho lo que se quería en la vida",
+        "formula": "+C150*6+D150*4+E150*2+G150*0"
+      },
+      {
+        "id": 17,
+        "text": "Cansancio, tedio o desgano",
+        "formula": "+C151*6+D151*4+E151*2+G151*0"
+      },
+      {
+        "id": 18,
+        "text": "Disminución del rendimiento en el trabajo o poca creatividad",
+        "formula": "+C152*6+D152*4+E152*2+G152*0"
+      },
+      {
+        "id": 19,
+        "text": "Deseo de no asistir al trabajo",
+        "formula": "+C153*6+D153*4+E153*2+G153*0"
+      },
+      {
+        "id": 20,
+        "text": "Bajo compromiso o poco interés con lo que se hace",
+        "formula": "+C154*3+D154*2+E154*1+G154*0"
+      },
+      {
+        "id": 21,
+        "text": "Dificultad para tomar decisiones",
+        "formula": "+C155*3+D155*2+E155*1+G155*0"
+      },
+      {
+        "id": 22,
+        "text": "Deseo de cambiar de empleo",
+        "formula": "+C156*3+D156*2+E156*1+G156*0"
+      },
+      {
+        "id": 23,
+        "text": "Sentimiento de soledad y miedo",
+        "formula": "+C157*9+D157*6+E157*3+G157*0"
+      },
+      {
+        "id": 24,
+        "text": "Sentimiento de irritabilidad, actitudes y pensamientos negativos",
+        "formula": "+C158*9+D158*6+E158*3+G158*0"
+      },
+      {
+        "id": 25,
+        "text": "Sentimiento de angustia, preocupación o tristeza",
+        "formula": "+C159*6+D159*4+E159*2+G159*0"
+      },
+      {
+        "id": 26,
+        "text": "Consumo de drogas para aliviar la tensión o los nervios",
+        "formula": "+C160*6+D160*4+E160*2+G160*0"
+      },
+      {
+        "id": 27,
+        "text": "Sentimiento de que \"no vale nada\", o \"no sirve para nada\"",
+        "formula": "+C161*6+D161*4+E161*2+G161*0"
+      },
+      {
+        "id": 28,
+        "text": "Consumo de bebidas alcohólicas o café o cigarrillo",
+        "formula": "+C162*6+D162*4+E162*2+G162*0"
+      },
+      {
+        "id": 29,
+        "text": "Sentimiento de que está perdiendo la razón",
+        "formula": "+C163*3+D163*2+E163*1+G163*0"
+      },
+      {
+        "id": 30,
+        "text": "Comportamientos rígidos, obstinación o terquedad",
+        "formula": "+C164*3+D164*2+E164*1+G164*0"
+      },
+      {
+        "id": 31,
+        "text": "Sensación de no poder manejar los problemas de la vida",
+        "formula": "+C165*3+D165*2+E165*1+G165*0"
+      }
+    ]
+  }
+}

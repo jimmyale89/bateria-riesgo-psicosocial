@@ -1,0 +1,1436 @@
+{
+  "formaA": {
+    "Características del liderazgo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 3.9,
+        "level": "Bajo"
+      },
+      {
+        "min": 15.5,
+        "level": "Medio"
+      },
+      {
+        "min": 30.900000000000002,
+        "level": "Alto"
+      },
+      {
+        "min": 46.300000000000004,
+        "level": "Muy Alto"
+      }
+    ],
+    "Relaciones sociales en el trabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 5.5,
+        "level": "Bajo"
+      },
+      {
+        "min": 16.200000000000003,
+        "level": "Medio"
+      },
+      {
+        "min": 25.1,
+        "level": "Alto"
+      },
+      {
+        "min": 37.6,
+        "level": "Muy Alto"
+      }
+    ],
+    "Retroalimentación del desempeño": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 10.1,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.1,
+        "level": "Medio"
+      },
+      {
+        "min": 40.1,
+        "level": "Alto"
+      },
+      {
+        "min": 55.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Relación con los colaboradores (subordinados)": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 14,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.1,
+        "level": "Medio"
+      },
+      {
+        "min": 33.4,
+        "level": "Alto"
+      },
+      {
+        "min": 47.300000000000004,
+        "level": "Muy Alto"
+      }
+    ],
+    "Claridad de rol": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 1,
+        "level": "Bajo"
+      },
+      {
+        "min": 10.799999999999999,
+        "level": "Medio"
+      },
+      {
+        "min": 21.5,
+        "level": "Alto"
+      },
+      {
+        "min": 39.4,
+        "level": "Muy Alto"
+      }
+    ],
+    "Capacitación": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 1,
+        "level": "Bajo"
+      },
+      {
+        "min": 16.8,
+        "level": "Medio"
+      },
+      {
+        "min": 33.4,
+        "level": "Alto"
+      },
+      {
+        "min": 50.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Participación y manejo del cambio": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 12.6,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.1,
+        "level": "Medio"
+      },
+      {
+        "min": 37.6,
+        "level": "Alto"
+      },
+      {
+        "min": 50.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Oportunidades para el uso y desarrollo de habilidades y conocimientos": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 1,
+        "level": "Bajo"
+      },
+      {
+        "min": 6.3999999999999995,
+        "level": "Medio"
+      },
+      {
+        "min": 18.900000000000002,
+        "level": "Alto"
+      },
+      {
+        "min": 31.400000000000002,
+        "level": "Muy Alto"
+      }
+    ],
+    "Control y autonomía sobre el trabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 8.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.1,
+        "level": "Medio"
+      },
+      {
+        "min": 41.800000000000004,
+        "level": "Alto"
+      },
+      {
+        "min": 58.4,
+        "level": "Muy Alto"
+      }
+    ],
+    "Demandas ambientales y de esfuerzo físico": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 14.7,
+        "level": "Bajo"
+      },
+      {
+        "min": 23,
+        "level": "Medio"
+      },
+      {
+        "min": 31.400000000000002,
+        "level": "Alto"
+      },
+      {
+        "min": 39.7,
+        "level": "Muy Alto"
+      }
+    ],
+    "Demandas emocionales": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 16.900000000000002,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.200000000000003,
+        "level": "Medio"
+      },
+      {
+        "min": 33.5,
+        "level": "Alto"
+      },
+      {
+        "min": 47.400000000000006,
+        "level": "Muy Alto"
+      }
+    ],
+    "Demandas cuantitativas": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 25.1,
+        "level": "Bajo"
+      },
+      {
+        "min": 33.4,
+        "level": "Medio"
+      },
+      {
+        "min": 45.9,
+        "level": "Alto"
+      },
+      {
+        "min": 54.300000000000004,
+        "level": "Muy Alto"
+      }
+    ],
+    "Influencia del trabajo sobre el entorno extralaboral": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 18.900000000000002,
+        "level": "Bajo"
+      },
+      {
+        "min": 31.400000000000002,
+        "level": "Medio"
+      },
+      {
+        "min": 43.9,
+        "level": "Alto"
+      },
+      {
+        "min": 50.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Exigencias de responsabilidad del cargo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 37.6,
+        "level": "Bajo"
+      },
+      {
+        "min": 54.300000000000004,
+        "level": "Medio"
+      },
+      {
+        "min": 66.8,
+        "level": "Alto"
+      },
+      {
+        "min": 79.3,
+        "level": "Muy Alto"
+      }
+    ],
+    "Demandas de carga mental": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 60.1,
+        "level": "Bajo"
+      },
+      {
+        "min": 70.1,
+        "level": "Medio"
+      },
+      {
+        "min": 80.1,
+        "level": "Alto"
+      },
+      {
+        "min": 90.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Consistencia del rol": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 15.1,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.1,
+        "level": "Medio"
+      },
+      {
+        "min": 35.1,
+        "level": "Alto"
+      },
+      {
+        "min": 45.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Demandas de la jornada de trabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 8.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.1,
+        "level": "Medio"
+      },
+      {
+        "min": 33.4,
+        "level": "Alto"
+      },
+      {
+        "min": 50.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Recompensas derivadas de la pertenencia a la organización y del trabajo que se realiza": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 1,
+        "level": "Bajo"
+      },
+      {
+        "min": 5.1,
+        "level": "Medio"
+      },
+      {
+        "min": 10.1,
+        "level": "Alto"
+      },
+      {
+        "min": 20.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Reconocimiento y compensación": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 4.3,
+        "level": "Bajo"
+      },
+      {
+        "min": 16.8,
+        "level": "Medio"
+      },
+      {
+        "min": 25.1,
+        "level": "Alto"
+      },
+      {
+        "min": 37.6,
+        "level": "Muy Alto"
+      }
+    ],
+    "Liderazgo y\nrelaciones\nsociales en el\ntrabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 9.2,
+        "level": "Bajo"
+      },
+      {
+        "min": 17.8,
+        "level": "Medio"
+      },
+      {
+        "min": 25.7,
+        "level": "Alto"
+      },
+      {
+        "min": 34.9,
+        "level": "Muy Alto"
+      }
+    ],
+    "Control sobre\nel trabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 10.8,
+        "level": "Bajo"
+      },
+      {
+        "min": 19.1,
+        "level": "Medio"
+      },
+      {
+        "min": 29.9,
+        "level": "Alto"
+      },
+      {
+        "min": 40.6,
+        "level": "Muy Alto"
+      }
+    ],
+    "Demandas\ndel trabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 28.6,
+        "level": "Bajo"
+      },
+      {
+        "min": 35.1,
+        "level": "Medio"
+      },
+      {
+        "min": 41.6,
+        "level": "Alto"
+      },
+      {
+        "min": 47.6,
+        "level": "Muy Alto"
+      }
+    ],
+    "Recompensas": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 4.6,
+        "level": "Bajo"
+      },
+      {
+        "min": 11.5,
+        "level": "Medio"
+      },
+      {
+        "min": 20.6,
+        "level": "Alto"
+      },
+      {
+        "min": 29.6,
+        "level": "Muy Alto"
+      }
+    ],
+    "Tiempo fuera del trabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 6.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.1,
+        "level": "Medio"
+      },
+      {
+        "min": 37.6,
+        "level": "Alto"
+      },
+      {
+        "min": 50.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Realciones Familiares": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 8.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.1,
+        "level": "Medio"
+      },
+      {
+        "min": 33.4,
+        "level": "Alto"
+      },
+      {
+        "min": 50.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Comunicación y relaciones interpersonales": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 1,
+        "level": "Bajo"
+      },
+      {
+        "min": 10.1,
+        "level": "Medio"
+      },
+      {
+        "min": 20.1,
+        "level": "Alto"
+      },
+      {
+        "min": 30.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Situación económica del grupo familiar": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 8.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.1,
+        "level": "Medio"
+      },
+      {
+        "min": 33.4,
+        "level": "Alto"
+      },
+      {
+        "min": 50.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Características de la vivienda y de su entorno": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 5.7,
+        "level": "Bajo"
+      },
+      {
+        "min": 11.2,
+        "level": "Medio"
+      },
+      {
+        "min": 14,
+        "level": "Alto"
+      },
+      {
+        "min": 22.3,
+        "level": "Muy Alto"
+      }
+    ],
+    "Influencia del entorno extralaboral sobre el trabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 8.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 16.8,
+        "level": "Medio"
+      },
+      {
+        "min": 25.1,
+        "level": "Alto"
+      },
+      {
+        "min": 41.8,
+        "level": "Muy Alto"
+      }
+    ],
+    "Desplazamiento vivienda - trabajo - vivienda": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 1,
+        "level": "Bajo"
+      },
+      {
+        "min": 12.6,
+        "level": "Medio"
+      },
+      {
+        "min": 25.1,
+        "level": "Alto"
+      },
+      {
+        "min": 43.9,
+        "level": "Muy Alto"
+      }
+    ],
+    "total del cuestionario de factores\nde riesgo psicosocial extralaboral": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 11.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 17,
+        "level": "Medio"
+      },
+      {
+        "min": 22.7,
+        "level": "Alto"
+      },
+      {
+        "min": 29.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "puntaje total del cuestionario de factores de riesgo psicosocial intralaboral": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 19.8,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.9,
+        "level": "Medio"
+      },
+      {
+        "min": 31.6,
+        "level": "Alto"
+      },
+      {
+        "min": 38.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "INTRA + EXTRA": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 18.9,
+        "level": "Bajo"
+      },
+      {
+        "min": 24.5,
+        "level": "Medio"
+      },
+      {
+        "min": 29.6,
+        "level": "Alto"
+      },
+      {
+        "min": 35.5,
+        "level": "Muy Alto"
+      }
+    ],
+    "estrés": [
+      {
+        "min": 0,
+        "level": "Muy Bajo"
+      },
+      {
+        "min": 7.9,
+        "level": "Bajo"
+      },
+      {
+        "min": 12.7,
+        "level": "Medio"
+      },
+      {
+        "min": 17.8,
+        "level": "Alto"
+      },
+      {
+        "min": 25.1,
+        "level": "Muy Alto"
+      }
+    ]
+  },
+  "formaB": {
+    "Características del liderazgo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 3.9,
+        "level": "Bajo"
+      },
+      {
+        "min": 13.6,
+        "level": "Medio"
+      },
+      {
+        "min": 25.1,
+        "level": "Alto"
+      },
+      {
+        "min": 38.6,
+        "level": "Muy Alto"
+      }
+    ],
+    "Relaciones sociales en el trabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 6.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 14.7,
+        "level": "Medio"
+      },
+      {
+        "min": 27.2,
+        "level": "Alto"
+      },
+      {
+        "min": 37.6,
+        "level": "Muy Alto"
+      }
+    ],
+    "Retroalimentación del desempeño": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 5.1,
+        "level": "Bajo"
+      },
+      {
+        "min": 20.1,
+        "level": "Medio"
+      },
+      {
+        "min": 30.1,
+        "level": "Alto"
+      },
+      {
+        "min": 50.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Claridad de rol": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 1,
+        "level": "Bajo"
+      },
+      {
+        "min": 5.1,
+        "level": "Medio"
+      },
+      {
+        "min": 15.1,
+        "level": "Alto"
+      },
+      {
+        "min": 30.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Capacitación": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 1,
+        "level": "Bajo"
+      },
+      {
+        "min": 16.8,
+        "level": "Medio"
+      },
+      {
+        "min": 25.1,
+        "level": "Alto"
+      },
+      {
+        "min": 50.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Participación y manejo del cambio": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 16.8,
+        "level": "Bajo"
+      },
+      {
+        "min": 33.4,
+        "level": "Medio"
+      },
+      {
+        "min": 41.8,
+        "level": "Alto"
+      },
+      {
+        "min": 58.4,
+        "level": "Muy Alto"
+      }
+    ],
+    "Oportunidades para el uso y desarrollo de habilidades y conocimientos": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 12.6,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.1,
+        "level": "Medio"
+      },
+      {
+        "min": 37.6,
+        "level": "Alto"
+      },
+      {
+        "min": 56.4,
+        "level": "Muy Alto"
+      }
+    ],
+    "Control y autonomía sobre el trabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 33.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 50.1,
+        "level": "Medio"
+      },
+      {
+        "min": 66.8,
+        "level": "Alto"
+      },
+      {
+        "min": 75.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Demandas ambientales y de esfuerzo físico": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 23,
+        "level": "Bajo"
+      },
+      {
+        "min": 31.4,
+        "level": "Medio"
+      },
+      {
+        "min": 39.7,
+        "level": "Alto"
+      },
+      {
+        "min": 48,
+        "level": "Muy Alto"
+      }
+    ],
+    "Demandas emocionales": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 19.5,
+        "level": "Bajo"
+      },
+      {
+        "min": 27.9,
+        "level": "Medio"
+      },
+      {
+        "min": 39,
+        "level": "Alto"
+      },
+      {
+        "min": 47.3,
+        "level": "Muy Alto"
+      }
+    ],
+    "Demandas cuantitativas": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 16.8,
+        "level": "Bajo"
+      },
+      {
+        "min": 33.4,
+        "level": "Medio"
+      },
+      {
+        "min": 41.8,
+        "level": "Alto"
+      },
+      {
+        "min": 50.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Influencia del trabajo sobre el entorno extralaboral": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 12.6,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.1,
+        "level": "Medio"
+      },
+      {
+        "min": 31.4,
+        "level": "Alto"
+      },
+      {
+        "min": 50.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Demandas de carga mental": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 50.1,
+        "level": "Bajo"
+      },
+      {
+        "min": 65.1,
+        "level": "Medio"
+      },
+      {
+        "min": 75.1,
+        "level": "Alto"
+      },
+      {
+        "min": 85.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Demandas de la jornada de trabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 25.1,
+        "level": "Bajo"
+      },
+      {
+        "min": 37.6,
+        "level": "Medio"
+      },
+      {
+        "min": 45.9,
+        "level": "Alto"
+      },
+      {
+        "min": 58.4,
+        "level": "Muy Alto"
+      }
+    ],
+    "Recompensas derivadas de la pertenencia a la organización y del trabajo que se realiza": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 1,
+        "level": "Bajo"
+      },
+      {
+        "min": 6.4,
+        "level": "Medio"
+      },
+      {
+        "min": 12.6,
+        "level": "Alto"
+      },
+      {
+        "min": 18.9,
+        "level": "Muy Alto"
+      }
+    ],
+    "Reconocimiento y compensación": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 1,
+        "level": "Bajo"
+      },
+      {
+        "min": 12.6,
+        "level": "Medio"
+      },
+      {
+        "min": 25.1,
+        "level": "Alto"
+      },
+      {
+        "min": 37.6,
+        "level": "Muy Alto"
+      }
+    ],
+    "Liderazgo y\nrelaciones\nsociales en el\ntrabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 8.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 17.6,
+        "level": "Medio"
+      },
+      {
+        "min": 26.8,
+        "level": "Alto"
+      },
+      {
+        "min": 38.4,
+        "level": "Muy Alto"
+      }
+    ],
+    "Control sobre\nel trabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 19.5,
+        "level": "Bajo"
+      },
+      {
+        "min": 26.5,
+        "level": "Medio"
+      },
+      {
+        "min": 34.8,
+        "level": "Alto"
+      },
+      {
+        "min": 43.2,
+        "level": "Muy Alto"
+      }
+    ],
+    "Demandas\ndel trabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 27,
+        "level": "Bajo"
+      },
+      {
+        "min": 33.4,
+        "level": "Medio"
+      },
+      {
+        "min": 37.9,
+        "level": "Alto"
+      },
+      {
+        "min": 44.3,
+        "level": "Muy Alto"
+      }
+    ],
+    "Recompensas": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 2.6,
+        "level": "Bajo"
+      },
+      {
+        "min": 10.1,
+        "level": "Medio"
+      },
+      {
+        "min": 17.6,
+        "level": "Alto"
+      },
+      {
+        "min": 27.6,
+        "level": "Muy Alto"
+      }
+    ],
+    "Tiempo fuera del trabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 6.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.1,
+        "level": "Medio"
+      },
+      {
+        "min": 37.6,
+        "level": "Alto"
+      },
+      {
+        "min": 50.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Realciones Familiares": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 8.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.1,
+        "level": "Medio"
+      },
+      {
+        "min": 33.4,
+        "level": "Alto"
+      },
+      {
+        "min": 50.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Comunicación y relaciones interpersonales": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 1,
+        "level": "Bajo"
+      },
+      {
+        "min": 10.1,
+        "level": "Medio"
+      },
+      {
+        "min": 20.1,
+        "level": "Alto"
+      },
+      {
+        "min": 30.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Situación económica del grupo familiar": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 8.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 25.1,
+        "level": "Medio"
+      },
+      {
+        "min": 33.4,
+        "level": "Alto"
+      },
+      {
+        "min": 50.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "Características de la vivienda y de su entorno": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 5.7,
+        "level": "Bajo"
+      },
+      {
+        "min": 11.2,
+        "level": "Medio"
+      },
+      {
+        "min": 14,
+        "level": "Alto"
+      },
+      {
+        "min": 22.3,
+        "level": "Muy Alto"
+      }
+    ],
+    "Influencia del entorno extralaboral sobre el trabajo": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 8.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 16.8,
+        "level": "Medio"
+      },
+      {
+        "min": 25.1,
+        "level": "Alto"
+      },
+      {
+        "min": 41.8,
+        "level": "Muy Alto"
+      }
+    ],
+    "Desplazamiento vivienda - trabajo - vivienda": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 1,
+        "level": "Bajo"
+      },
+      {
+        "min": 12.6,
+        "level": "Medio"
+      },
+      {
+        "min": 25.1,
+        "level": "Alto"
+      },
+      {
+        "min": 43.9,
+        "level": "Muy Alto"
+      }
+    ],
+    "total del cuestionario de factores\nde riesgo psicosocial extralaboral": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 11.4,
+        "level": "Bajo"
+      },
+      {
+        "min": 17,
+        "level": "Medio"
+      },
+      {
+        "min": 22.7,
+        "level": "Alto"
+      },
+      {
+        "min": 29.1,
+        "level": "Muy Alto"
+      }
+    ],
+    "puntaje total del cuestionario de factores de riesgo psicosocial intralaboral": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 20.7,
+        "level": "Bajo"
+      },
+      {
+        "min": 26.1,
+        "level": "Medio"
+      },
+      {
+        "min": 31.3,
+        "level": "Alto"
+      },
+      {
+        "min": 38.8,
+        "level": "Muy Alto"
+      }
+    ],
+    "INTRA + EXTRA": [
+      {
+        "min": 0,
+        "level": "Sin Riesgo"
+      },
+      {
+        "min": 20,
+        "level": "Bajo"
+      },
+      {
+        "min": 24.9,
+        "level": "Medio"
+      },
+      {
+        "min": 29.6,
+        "level": "Alto"
+      },
+      {
+        "min": 35.5,
+        "level": "Muy Alto"
+      }
+    ],
+    "estrés": [
+      {
+        "min": 0,
+        "level": "Muy Bajo"
+      },
+      {
+        "min": 6.6,
+        "level": "Bajo"
+      },
+      {
+        "min": 11.9,
+        "level": "Medio"
+      },
+      {
+        "min": 17.1,
+        "level": "Alto"
+      },
+      {
+        "min": 23.5,
+        "level": "Muy Alto"
+      }
+    ]
+  }
+}
